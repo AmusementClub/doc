@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>VapourSynth C API Reference &#8212; VapourSynth R55 documentation</title>
+    <title>VapourSynth C API Reference &#8212; VapourSynth-Classic R55 documentation</title>
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="_static/agogo.css" />
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
@@ -17,14 +17,14 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="VapourSynth.h" href="api/vapoursynth.h.html" />
-    <link rel="prev" title="VSPipe" href="vspipe.html" /> 
+    <link rel="prev" title="VIVTC" href="plugins/vivtc.html" /> 
   </head><body>
     <div class="header-wrapper" role="banner">
       <div class="header">
         <div class="headertitle"><a
-          href="index.html">VapourSynth R55 documentation</a></div>
+          href="index.html">VapourSynth-Classic R55 documentation</a></div>
         <div class="rel" role="navigation" aria-label="related navigation">
-          <a href="vspipe.html" title="VSPipe"
+          <a href="plugins/vivtc.html" title="VIVTC"
              accesskey="P">previous</a> |
           <a href="api/vapoursynth.h.html" title="VapourSynth.h"
              accesskey="N">next</a> |
@@ -150,13 +150,6 @@ additional frame types.</p>
 <div><p>A clip’s alpha channel can be attached to the clip one frame at a
 time using this property.</p>
 </div></blockquote>
-<section id="deprecated-frame-properties">
-<h3>Deprecated Frame Properties<a class="headerlink" href="#deprecated-frame-properties" title="Permalink to this headline">¶</a></h3>
-<p>int _ColorSpace</p>
-<blockquote>
-<div><p>Superseded by _Matrix, _Transfer, and _Primaries.</p>
-</div></blockquote>
-</section>
 </section>
 </section>
 
@@ -170,16 +163,16 @@ time using this property.</p>
           
           <h3>Table of Contents</h3>
           <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="about.html">About</a></li>
 <li class="toctree-l1"><a class="reference internal" href="installation.html">Installation Instructions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="gettingstarted.html">Getting Started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="plugins.html">Plugins and Scripts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gettingstarted.html">Getting Started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pythonreference.html">Python Reference</a></li>
-<li class="toctree-l1"><a class="reference internal" href="avfs.html">AVFS (AV FileSystem)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functions.html">Function Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="output.html">Output</a></li>
 <li class="toctree-l1"><a class="reference internal" href="applications.html">Applications and Libraries</a></li>
 <li class="toctree-l1"><a class="reference internal" href="avisynthcomp.html">Avisynth functions and their VapourSynth equivalents</a></li>
 <li class="toctree-l1"><a class="reference internal" href="includedplugins.html">Included Plugins</a></li>
-<li class="toctree-l1"><a class="reference internal" href="functions.html">Function Reference</a></li>
-<li class="toctree-l1"><a class="reference internal" href="vspipe.html">VSPipe</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">VapourSynth C API Reference</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#public-headers">Public Headers</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="api/vapoursynth.h.html">VapourSynth.h</a></li>
@@ -192,13 +185,9 @@ time using this property.</p>
 <li class="toctree-l3"><a class="reference internal" href="#plugins">Plugins</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#reserved-frame-properties">Reserved Frame Properties</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#deprecated-frame-properties">Deprecated Frame Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#reserved-frame-properties">Reserved Frame Properties</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="about.html">About</a></li>
 </ul>
 
           <div role="search">
@@ -218,7 +207,7 @@ time using this property.</p>
       <div class="footer">
         <div class="left">
           <div role="navigation" aria-label="related navigaton">
-            <a href="vspipe.html" title="VSPipe"
+            <a href="plugins/vivtc.html" title="VIVTC"
               >previous</a> |
             <a href="api/vapoursynth.h.html" title="VapourSynth.h"
               >next</a> |
@@ -236,7 +225,7 @@ time using this property.</p>
           
     <div class="footer" role="contentinfo">
         &#169; Copyright 2012-2021, Fredrik Mellbin.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.1.2.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.2.0.
     </div>
         </div>
         <div class="clearer"></div>

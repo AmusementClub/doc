@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Python Reference &#8212; VapourSynth R55 documentation</title>
+    <title>Python Reference &#8212; VapourSynth-Classic R55 documentation</title>
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="_static/agogo.css" />
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
@@ -16,17 +16,17 @@
     <link rel="author" title="About these documents" href="about.html" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="AVFS (AV FileSystem)" href="avfs.html" />
-    <link rel="prev" title="Plugins and Scripts" href="plugins.html" /> 
+    <link rel="next" title="Function Reference" href="functions.html" />
+    <link rel="prev" title="Getting Started" href="gettingstarted.html" /> 
   </head><body>
     <div class="header-wrapper" role="banner">
       <div class="header">
         <div class="headertitle"><a
-          href="index.html">VapourSynth R55 documentation</a></div>
+          href="index.html">VapourSynth-Classic R55 documentation</a></div>
         <div class="rel" role="navigation" aria-label="related navigation">
-          <a href="plugins.html" title="Plugins and Scripts"
+          <a href="gettingstarted.html" title="Getting Started"
              accesskey="P">previous</a> |
-          <a href="avfs.html" title="AVFS (AV FileSystem)"
+          <a href="functions.html" title="Function Reference"
              accesskey="N">next</a> |
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a>
@@ -63,8 +63,10 @@ For this reason you call a plugin function with <em>core.unit.Function()</em>.</
 are CamelCase. Unit names are also lowercase and usually short. This is good to
 remember as a general rule.</p>
 </section>
+<section id="grammar">
+<h2>Grammar<a class="headerlink" href="#grammar" title="Permalink to this headline">¶</a></h2>
 <section id="slicing-and-other-syntactic-sugar">
-<h2>Slicing and Other Syntactic Sugar<a class="headerlink" href="#slicing-and-other-syntactic-sugar" title="Permalink to this headline">¶</a></h2>
+<h3>Slicing and Other Syntactic Sugar<a class="headerlink" href="#slicing-and-other-syntactic-sugar" title="Permalink to this headline">¶</a></h3>
 <p>The VideoNode class (always called “clip” in practice) supports the full
 range of indexing and slicing operations in Python. If you do perform a slicing
 operation on a clip, you will get a new clip back with the desired frames.
@@ -118,7 +120,7 @@ Here are a few examples.</p>
 <p>Note that multiplication by 0 is a special case that will repeat the clip up to the maximum frame count.</p>
 </section>
 <section id="python-keywords-as-filter-arguments">
-<h2>Python Keywords as Filter Arguments<a class="headerlink" href="#python-keywords-as-filter-arguments" title="Permalink to this headline">¶</a></h2>
+<h3>Python Keywords as Filter Arguments<a class="headerlink" href="#python-keywords-as-filter-arguments" title="Permalink to this headline">¶</a></h3>
 <p>If a filter’s argument happens to be a Python keyword, you may prepend
 an underscore to the argument’s name when invoking the filter. The Python
 module will strip one leading underscore from all filter arguments before
@@ -135,7 +137,7 @@ passing them to the filters.</p>
 underscore to prevent collisions with python keywords.</p>
 </section>
 <section id="windows-file-paths-strings-with-backslashes">
-<h2>Windows File Paths (Strings With Backslashes)<a class="headerlink" href="#windows-file-paths-strings-with-backslashes" title="Permalink to this headline">¶</a></h2>
+<h3>Windows File Paths (Strings With Backslashes)<a class="headerlink" href="#windows-file-paths-strings-with-backslashes" title="Permalink to this headline">¶</a></h3>
 <p>If you have a string containing backslashes, you must either prefix the
 string with “r”, or duplicate every single backslash. The reason is
 that the backslash is an escape character in Python.</p>
@@ -160,7 +162,7 @@ written with forward slashes instead of backslashes:</p>
 </div>
 </section>
 <section id="output">
-<h2>Output<a class="headerlink" href="#output" title="Permalink to this headline">¶</a></h2>
+<h3>Output<a class="headerlink" href="#output" title="Permalink to this headline">¶</a></h3>
 <p>The normal way of specifying the clip(s) to output is to call
 <em>clip.set_output()</em>. All standard VapourSynth components only use output
 index 0, except for vspipe where it’s configurable but defaults to 0.
@@ -181,14 +183,15 @@ YUV420P8 (I420, IYUV), YUV422P8 (YUY2, UYVY) and YUV422P10 (v210).</p>
 </div>
 </section>
 <section id="raw-access-to-frame-data">
-<h2>Raw Access to Frame Data<a class="headerlink" href="#raw-access-to-frame-data" title="Permalink to this headline">¶</a></h2>
+<h3>Raw Access to Frame Data<a class="headerlink" href="#raw-access-to-frame-data" title="Permalink to this headline">¶</a></h3>
 <p>The VideoFrame and AudioFrame classes contains one picture/audio chunk and all the metadata
 associated with it. It is possible to access the raw data using either
 <em>get_read_ptr(plane)</em> or <em>get_write_ptr(plane)</em> and <em>get_stride(plane)</em> with ctypes.</p>
 <p>A more Python friendly wrapping is also available where each plane/channel can be accessed
 as a Python array using <em>frame[plane/channel]</em>.</p>
 <p>For backward compatibility reasons, the VideoFrame class also provides <em>get_read_array(plane)</em>
-and <em>get_write_array(plane)</em>, which return <em>numpy.ndarray</em> for full PEP-3118 compliance.</p>
+and <em>get_write_array(plane)</em> whose returned value implements the Python buffer protocol, and
+the pixels at using <em>arr[row,col]</em>.</p>
 <p>To get a frame simply call <em>get_frame(n)</em> on a clip. Should you desire to get
 all frames in a clip, use this code:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">frame</span> <span class="ow">in</span> <span class="n">clip</span><span class="o">.</span><span class="n">frames</span><span class="p">():</span>
@@ -196,6 +199,7 @@ all frames in a clip, use this code:</p>
     <span class="k">pass</span>
 </pre></div>
 </div>
+</section>
 </section>
 <section id="classes-and-functions">
 <h2>Classes and Functions<a class="headerlink" href="#classes-and-functions" title="Permalink to this headline">¶</a></h2>
@@ -1147,8 +1151,10 @@ encountered in VapourSynth.</p>
 </dd></dl>
 
 </section>
-<section id="color-family-constants">
-<h2>Color Family Constants<a class="headerlink" href="#color-family-constants" title="Permalink to this headline">¶</a></h2>
+<section id="constants">
+<h2>Constants<a class="headerlink" href="#constants" title="Permalink to this headline">¶</a></h2>
+<section id="video-color-family-constants">
+<h3>Video Color Family Constants<a class="headerlink" href="#video-color-family-constants" title="Permalink to this headline">¶</a></h3>
 <p>The color family constants describe groups of formats and the basic way their
 color information is stored. You should be familiar with all of them apart from
 maybe <em>YCOCG</em> and <em>COMPAT</em>. The latter is a special junk category for non-planar
@@ -1160,8 +1166,8 @@ formats. These are the declared constants in the module:</p>
 </pre></div>
 </div>
 </section>
-<section id="format-constants">
-<h2>Format Constants<a class="headerlink" href="#format-constants" title="Permalink to this headline">¶</a></h2>
+<section id="video-format-constants">
+<h3>Video Format Constants<a class="headerlink" href="#video-format-constants" title="Permalink to this headline">¶</a></h3>
 <p>Format constants exactly describe a format. All common and even more uncommon
 formats have handy constants predefined so in practice no one should really
 need to register one of their own. These values are mostly used by the resizers
@@ -1169,7 +1175,9 @@ to specify which format to convert to. The naming system is quite simple. First
 the color family, then the subsampling (only YUV has it) and after that how many
 bits per sample in one plane. The exception to this rule is RGB, which has the
 bits for all 3 planes added together. The long list of values:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">GRAY8</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">NONE</span>
+
+<span class="n">GRAY8</span>
 <span class="n">GRAY9</span>
 <span class="n">GRAY10</span>
 <span class="n">GRAY12</span>
@@ -1215,18 +1223,48 @@ bits for all 3 planes added together. The long list of values:</p>
 <span class="n">RGB36</span>
 <span class="n">RGB42</span>
 <span class="n">RGB48</span>
-
 <span class="n">RGBH</span>
 <span class="n">RGBS</span>
 </pre></div>
 </div>
 </section>
+<section id="audio-channel-constants">
+<h3>Audio Channel Constants<a class="headerlink" href="#audio-channel-constants" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">FRONT_LEFT</span>
+<span class="n">FRONT_RIGHT</span>
+<span class="n">FRONT_CENTER</span>
+<span class="n">LOW_FREQUENCY</span>
+<span class="n">BACK_LEFT</span>
+<span class="n">BACK_RIGHT</span>
+<span class="n">FRONT_LEFT_OF_CENTER</span>
+<span class="n">FRONT_RIGHT_OF_CENTER</span>
+<span class="n">BACK_CENTER</span>
+<span class="n">SIDE_LEFT</span>
+<span class="n">SIDE_RIGHT</span>
+<span class="n">TOP_CENTER</span>
+<span class="n">TOP_FRONT_LEFT</span>
+<span class="n">TOP_FRONT_CENTER</span>
+<span class="n">TOP_FRONT_RIGHT</span>
+<span class="n">TOP_BACK_LEFT</span>
+<span class="n">TOP_BACK_CENTER</span>
+<span class="n">TOP_BACK_RIGHT</span>
+<span class="n">STEREO_LEFT</span>
+<span class="n">STEREO_RIGHT</span>
+<span class="n">WIDE_LEFT</span>
+<span class="n">WIDE_RIGHT</span>
+<span class="n">SURROUND_DIRECT_LEFT</span>
+<span class="n">SURROUND_DIRECT_RIGHT</span>
+<span class="n">LOW_FREQUENCY2</span>
+</pre></div>
+</div>
+</section>
 <section id="sample-type-constants">
-<h2>Sample Type Constants<a class="headerlink" href="#sample-type-constants" title="Permalink to this headline">¶</a></h2>
+<h3>Sample Type Constants<a class="headerlink" href="#sample-type-constants" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">INTEGER</span>
 <span class="n">FLOAT</span>
 </pre></div>
 </div>
+</section>
 </section>
 </section>
 
@@ -1240,30 +1278,36 @@ bits for all 3 planes added together. The long list of values:</p>
           
           <h3>Table of Contents</h3>
           <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="about.html">About</a></li>
 <li class="toctree-l1"><a class="reference internal" href="installation.html">Installation Instructions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="gettingstarted.html">Getting Started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="plugins.html">Plugins and Scripts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gettingstarted.html">Getting Started</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Python Reference</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#vapoursynth-structure">VapourSynth Structure</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#slicing-and-other-syntactic-sugar">Slicing and Other Syntactic Sugar</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#python-keywords-as-filter-arguments">Python Keywords as Filter Arguments</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#windows-file-paths-strings-with-backslashes">Windows File Paths (Strings With Backslashes)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#output">Output</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#raw-access-to-frame-data">Raw Access to Frame Data</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#classes-and-functions">Classes and Functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#color-family-constants">Color Family Constants</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#format-constants">Format Constants</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#sample-type-constants">Sample Type Constants</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#grammar">Grammar</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#slicing-and-other-syntactic-sugar">Slicing and Other Syntactic Sugar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#python-keywords-as-filter-arguments">Python Keywords as Filter Arguments</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#windows-file-paths-strings-with-backslashes">Windows File Paths (Strings With Backslashes)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#output">Output</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#raw-access-to-frame-data">Raw Access to Frame Data</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="avfs.html">AVFS (AV FileSystem)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#classes-and-functions">Classes and Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#constants">Constants</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#video-color-family-constants">Video Color Family Constants</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#video-format-constants">Video Format Constants</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#audio-channel-constants">Audio Channel Constants</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sample-type-constants">Sample Type Constants</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="functions.html">Function Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="output.html">Output</a></li>
 <li class="toctree-l1"><a class="reference internal" href="applications.html">Applications and Libraries</a></li>
 <li class="toctree-l1"><a class="reference internal" href="avisynthcomp.html">Avisynth functions and their VapourSynth equivalents</a></li>
 <li class="toctree-l1"><a class="reference internal" href="includedplugins.html">Included Plugins</a></li>
-<li class="toctree-l1"><a class="reference internal" href="functions.html">Function Reference</a></li>
-<li class="toctree-l1"><a class="reference internal" href="vspipe.html">VSPipe</a></li>
 <li class="toctree-l1"><a class="reference internal" href="apireference.html">VapourSynth C API Reference</a></li>
-<li class="toctree-l1"><a class="reference internal" href="about.html">About</a></li>
 </ul>
 
           <div role="search">
@@ -1283,9 +1327,9 @@ bits for all 3 planes added together. The long list of values:</p>
       <div class="footer">
         <div class="left">
           <div role="navigation" aria-label="related navigaton">
-            <a href="plugins.html" title="Plugins and Scripts"
+            <a href="gettingstarted.html" title="Getting Started"
               >previous</a> |
-            <a href="avfs.html" title="AVFS (AV FileSystem)"
+            <a href="functions.html" title="Function Reference"
               >next</a> |
             <a href="genindex.html" title="General Index"
               >index</a>
@@ -1301,7 +1345,7 @@ bits for all 3 planes added together. The long list of values:</p>
           
     <div class="footer" role="contentinfo">
         &#169; Copyright 2012-2021, Fredrik Mellbin.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.1.2.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.2.0.
     </div>
         </div>
         <div class="clearer"></div>

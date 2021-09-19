@@ -1,23 +1,22 @@
-Welcome to `VapourSynth <http://www.vapoursynth.com/>`_’s documentation!
-========================================================================
+Welcome to `VapourSynth-Classic <https://amusementclub.github.io/doc/>`_’s documentation!
+=========================================================================================
 
 Contents:
 
 .. toctree::
    :maxdepth: 3
 
+   about
    installation
-   gettingstarted
    plugins
+   gettingstarted
    pythonreference  
-   avfs
+   functions
+   output
    applications
    avisynthcomp
    includedplugins
-   functions
-   vspipe
    apireference
-   about
 
 
 Indices and tables
