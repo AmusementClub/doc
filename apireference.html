@@ -6,14 +6,14 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>VapourSynth C API Reference &#8212; VapourSynth-Classic R55 documentation</title>
+    <title>VapourSynth C API Reference &#8212; VapourSynth-Classic R57 documentation</title>
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="_static/agogo.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/custom.css" />
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
-    <link rel="author" title="About these documents" href="about.html" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="VapourSynth.h" href="api/vapoursynth.h.html" />
@@ -22,7 +22,7 @@
     <div class="header-wrapper" role="banner">
       <div class="header">
         <div class="headertitle"><a
-          href="index.html">VapourSynth-Classic R55 documentation</a></div>
+          href="index.html">VapourSynth-Classic R57 documentation</a></div>
         <div class="rel" role="navigation" aria-label="related navigation">
           <a href="plugins/vivtc.html" title="VIVTC"
              accesskey="P">previous</a> |
@@ -65,7 +65,7 @@ several built-in functions, can also be very helpful.</p>
 </section>
 <section id="plugins">
 <h3>Plugins<a class="headerlink" href="#plugins" title="Permalink to this headline">¶</a></h3>
-<p>Plugin code may run more multithreaded than it initially appears. <em>VapourSynthPluginInit</em> is the only function always guaranteed to not run in parallel. This means that the contructor and destructor of a filter may be run in parallel for several instances. Use proper synchronization if you need to initialize shared data.</p>
+<p>Plugin code may run more multithreaded than it initially appears. <em>VapourSynthPluginInit</em> is the only function always guaranteed to not run in parallel. This means that the constructor and destructor of a filter may be run in parallel for several instances. Use proper synchronization if you need to initialize shared data.</p>
 <p>The <em>GetFrame</em> function is a bit more complicated so see the reference of the constants. Do however note that the parallelism is per instance. Even if a filter is <em>fmUnordered</em> or <em>fmSerial</em> other instances may enter <em>GetFrame</em> simultaneously.</p>
 <p>There are two common misconseptions about which mode should be used. A simple rule is that <em>fmSerial</em> should never be used. And source filters (those returning a frame on <em>arInitial</em>) that need locking should use <em>fmUnordered</em>.</p>
 </section>
@@ -163,9 +163,8 @@ time using this property.</p>
           
           <h3>Table of Contents</h3>
           <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="about.html">About</a></li>
-<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation Instructions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="plugins.html">Plugins and Scripts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="gettingstarted.html">Getting Started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pythonreference.html">Python Reference</a></li>
 <li class="toctree-l1"><a class="reference internal" href="functions.html">Function Reference</a></li>
@@ -225,7 +224,7 @@ time using this property.</p>
           
     <div class="footer" role="contentinfo">
         &#169; Copyright 2012-2021, Fredrik Mellbin.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.2.0.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.0.
     </div>
         </div>
         <div class="clearer"></div>

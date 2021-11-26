@@ -6,14 +6,14 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>ImageMagick Writer-Reader &#8212; VapourSynth-Classic R55 documentation</title>
+    <title>ImageMagick Writer-Reader &#8212; VapourSynth-Classic R57 documentation</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/agogo.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/custom.css" />
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <link rel="author" title="About these documents" href="../about.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Miscellaneous Filters" href="misc.html" />
@@ -22,7 +22,7 @@
     <div class="header-wrapper" role="banner">
       <div class="header">
         <div class="headertitle"><a
-          href="../index.html">VapourSynth-Classic R55 documentation</a></div>
+          href="../index.html">VapourSynth-Classic R57 documentation</a></div>
         <div class="rel" role="navigation" aria-label="related navigation">
           <a href="eedi3.html" title="EEDI3"
              accesskey="P">previous</a> |
@@ -47,7 +47,7 @@
 <p>ImageMagick Writer-Reader (IMWRI) is a plugin that can read and write many image formats.</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="imwri.Write">
-<span class="sig-prename descclassname"><span class="pre">imwri.</span></span><span class="sig-name descname"><span class="pre">Write</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">clip</span> <span class="pre">clip</span></em>, <em class="sig-param"><span class="pre">string</span> <span class="pre">imgformat</span></em>, <em class="sig-param"><span class="pre">string</span> <span class="pre">filename</span></em><span class="optional">[</span>, <em class="sig-param"><span class="pre">int</span> <span class="pre">firstnum=0</span></em>, <em class="sig-param"><span class="pre">int</span> <span class="pre">quality=75</span></em>, <em class="sig-param"><span class="pre">bint</span> <span class="pre">dither=True</span></em>, <em class="sig-param"><span class="pre">string</span> <span class="pre">compression_type</span></em>, <em class="sig-param"><span class="pre">bint</span> <span class="pre">overwrite=False</span></em>, <em class="sig-param"><span class="pre">clip</span> <span class="pre">alpha</span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#imwri.Write" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">imwri.</span></span><span class="sig-name descname"><span class="pre">Write</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">clip</span> <span class="pre">clip</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">string</span> <span class="pre">imgformat</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">string</span> <span class="pre">filename</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">firstnum=0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">quality=75</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bint</span> <span class="pre">dither=True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">string</span> <span class="pre">compression_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bint</span> <span class="pre">overwrite=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clip</span> <span class="pre">alpha</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#imwri.Write" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="simple">
 <dt>Supported input formats for writing:</dt><dd><p>ImageMagick with Quantum Depth 16 and HDRI: 8-16 bit integer, 32 bit float</p>
 </dd>
@@ -81,7 +81,7 @@ Undefined, None, BZip, DXT1, DXT3, DXT5, Fax, Group4, JPEG, JPEG2000, LosslessJP
 
 <dl class="py function">
 <dt class="sig sig-object py" id="imwri.Read">
-<span class="sig-prename descclassname"><span class="pre">imwri.</span></span><span class="sig-name descname"><span class="pre">Read</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">string[]</span> <span class="pre">filename</span></em><span class="optional">[</span>, <em class="sig-param"><span class="pre">int</span> <span class="pre">firstnum=0</span></em>, <em class="sig-param"><span class="pre">bint</span> <span class="pre">mismatch=False</span></em>, <em class="sig-param"><span class="pre">bint</span> <span class="pre">alpha=False</span></em>, <em class="sig-param"><span class="pre">bint</span> <span class="pre">float_output</span> <span class="pre">=</span> <span class="pre">False</span></em>, <em class="sig-param"><span class="pre">bint</span> <span class="pre">embed_icc</span> <span class="pre">=</span> <span class="pre">False</span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#imwri.Read" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">imwri.</span></span><span class="sig-name descname"><span class="pre">Read</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">string[]</span> <span class="pre">filename</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">firstnum=0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bint</span> <span class="pre">mismatch=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bint</span> <span class="pre">alpha=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bint</span> <span class="pre">float_output</span> <span class="pre">=</span> <span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bint</span> <span class="pre">embed_icc</span> <span class="pre">=</span> <span class="pre">False</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#imwri.Read" title="Permalink to this definition">¶</a></dt>
 <dd><p>Possible output formats when reading: 8-16 bit integer and 32 bit float</p>
 <p>Note that by default 8-16 bit images are returned as integer and 32 bit images as float. When reading half precision float images you have to manually set <em>float_output</em> to have the unmodified floating point range returned.</p>
 <p>Read is a simple function for reading single or series of images and returning them as a clip.</p>
@@ -116,9 +116,8 @@ Undefined, None, BZip, DXT1, DXT3, DXT5, Fax, Group4, JPEG, JPEG2000, LosslessJP
           
           <h3>Table of Contents</h3>
           <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../about.html">About</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation Instructions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../plugins.html">Plugins and Scripts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../gettingstarted.html">Getting Started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../pythonreference.html">Python Reference</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../functions.html">Function Reference</a></li>
@@ -176,7 +175,7 @@ Undefined, None, BZip, DXT1, DXT3, DXT5, Fax, Group4, JPEG, JPEG2000, LosslessJP
           
     <div class="footer" role="contentinfo">
         &#169; Copyright 2012-2021, Fredrik Mellbin.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.2.0.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.0.
     </div>
         </div>
         <div class="clearer"></div>

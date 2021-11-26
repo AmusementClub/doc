@@ -5,21 +5,21 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Index &#8212; VapourSynth-Classic R55 documentation</title>
+    <title>Index &#8212; VapourSynth-Classic R57 documentation</title>
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="_static/agogo.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/custom.css" />
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
-    <link rel="author" title="About these documents" href="about.html" />
     <link rel="index" title="Index" href="#" />
     <link rel="search" title="Search" href="search.html" /> 
   </head><body>
     <div class="header-wrapper" role="banner">
       <div class="header">
         <div class="headertitle"><a
-          href="index.html">VapourSynth-Classic R55 documentation</a></div>
+          href="index.html">VapourSynth-Classic R57 documentation</a></div>
         <div class="rel" role="navigation" aria-label="related navigation">
           <a href="#" title="General Index"
              accesskey="I">index</a>
@@ -53,6 +53,7 @@
  | <a href="#N"><strong>N</strong></a>
  | <a href="#O"><strong>O</strong></a>
  | <a href="#P"><strong>P</strong></a>
+ | <a href="#Q"><strong>Q</strong></a>
  | <a href="#R"><strong>R</strong></a>
  | <a href="#S"><strong>S</strong></a>
  | <a href="#T"><strong>T</strong></a>
@@ -64,6 +65,8 @@
 <h2 id="A">A</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="pythonreference.html#Core.add_log_handler">add_log_handler() (Core method)</a>
+</li>
       <li><a href="functions/video/addborders.html#std.AddBorders">AddBorders() (in module std)</a>
 </li>
       <li><a href="pythonreference.html#Environment.alive">alive (Environment attribute)</a>
@@ -82,10 +85,10 @@
 </li>
       <li><a href="pythonreference.html#AudioFrame">AudioFrame (built-in class)</a>
 </li>
-      <li><a href="functions/audio/audiogain.html#std.AudioGain">AudioGain() (in module std)</a>
-</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="functions/audio/audiogain.html#std.AudioGain">AudioGain() (in module std)</a>
+</li>
       <li><a href="functions/audio/audioloop.html#std.AudioLoop">AudioLoop() (in module std)</a>
 </li>
       <li><a href="functions/audio/audiomix.html#std.AudioMix">AudioMix() (in module std)</a>
@@ -163,8 +166,6 @@
         <li><a href="pythonreference.html#has_policy">has_policy()</a>
 </li>
         <li><a href="pythonreference.html#register_policy">register_policy()</a>
-</li>
-        <li><a href="pythonreference.html#set_message_handler">set_message_handler()</a>
 </li>
         <li><a href="pythonreference.html#vpy_current_environment">vpy_current_environment()</a>
 </li>
@@ -266,10 +267,12 @@
 </li>
       <li><a href="functions/video/deleteframes.html#std.DeleteFrames">DeleteFrames() (in module std)</a>
 </li>
-      <li><a href="pythonreference.html#EnvironmentPolicyAPI.destroy_environment">destroy_environment() (EnvironmentPolicyAPI method)</a>
+      <li><a href="pythonreference.html#VideoNode.denominator">denominator (VideoNode attribute)</a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="pythonreference.html#EnvironmentPolicyAPI.destroy_environment">destroy_environment() (EnvironmentPolicyAPI method)</a>
+</li>
       <li><a href="plugins/morpho.html#morpho.Dilate">Dilate() (in module morpho)</a>
 </li>
       <li><a href="functions/video/doubleweave.html#std.DoubleWeave">DoubleWeave() (in module std)</a>
@@ -339,10 +342,10 @@
 </li>
       <li><a href="pythonreference.html#VideoNode.fps_den">fps_den (VideoNode attribute)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="pythonreference.html#VideoNode.fps_num">fps_num (VideoNode attribute)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/vapoursynth.h.html#c.fpsDen">fpsDen (C member)</a>
 </li>
       <li><a href="api/vapoursynth.h.html#c.fpsNum">fpsNum (C member)</a>
@@ -364,6 +367,8 @@
       <li><a href="pythonreference.html#Func">Func (built-in class)</a>
 </li>
       <li><a href="pythonreference.html#Function">Function (built-in class)</a>
+</li>
+      <li><a href="pythonreference.html#Plugin.functions">functions() (Plugin method)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -477,6 +482,8 @@
         <li><a href="pythonreference.html#VideoFormat.id">(VideoFormat attribute)</a>
 </li>
       </ul></li>
+      <li><a href="pythonreference.html#Plugin.identifier">identifier (Plugin attribute)</a>
+</li>
       <li><a href="plugins/subtext.html#sub.ImageFile">ImageFile() (in module sub)</a>
 </li>
       <li><a href="functions/video/deflate_inflate.html#std.Inflate">Inflate() (in module std)</a>
@@ -515,16 +522,18 @@
         <li><a href="pythonreference.html#Plugin.list_functions">(Plugin method)</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="functions/general/loadallplugins.html#std.LoadAllPlugins">LoadAllPlugins() (in module std)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="functions/general/loadpluginavs.html#avs.LoadPlugin">LoadPlugin() (in module avs)</a>
 
       <ul>
         <li><a href="functions/general/loadplugin.html#std.LoadPlugin">(in module std)</a>
 </li>
       </ul></li>
+      <li><a href="pythonreference.html#Core.log_message">log_message() (Core method)</a>
+</li>
       <li><a href="functions/video/loop.html#std.Loop">Loop() (in module std)</a>
 </li>
       <li><a href="functions/video/lut.html#std.Lut">Lut() (in module std)</a>
@@ -572,6 +581,8 @@
       <ul>
         <li><a href="pythonreference.html#Function.name">(Function attribute)</a>
 </li>
+        <li><a href="pythonreference.html#Plugin.name">(Plugin attribute)</a>
+</li>
         <li><a href="pythonreference.html#VideoFormat.name">(VideoFormat attribute)</a>
 </li>
       </ul></li>
@@ -590,6 +601,8 @@
       <li><a href="pythonreference.html#VideoFormat.num_planes">num_planes (VideoFormat attribute)</a>
 </li>
       <li><a href="pythonreference.html#Core.num_threads">num_threads (Core attribute)</a>
+</li>
+      <li><a href="pythonreference.html#VideoNode.numerator">numerator (VideoNode attribute)</a>
 </li>
       <li><a href="api/vapoursynth.h.html#c.numFrames">numFrames (C member)</a>
 </li>
@@ -629,10 +642,12 @@
 </li>
       <li><a href="pythonreference.html#Function.plugin">plugin (Function attribute)</a>
 </li>
-      <li><a href="functions/video/resize.html#resize.Point">Point() (in module resize)</a>
+      <li><a href="pythonreference.html#Core.plugins">plugins() (Core method)</a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="functions/video/resize.html#resize.Point">Point() (in module resize)</a>
+</li>
       <li><a href="functions/video/premultiply.html#std.PreMultiply">PreMultiply() (in module std)</a>
 </li>
       <li><a href="functions/video/prewitt_sobel.html#std.Prewitt">Prewitt() (in module std)</a>
@@ -644,6 +659,14 @@
 </li>
       </ul></li>
       <li><a href="functions/video/proptoclip.html#std.PropToClip">PropToClip() (in module std)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="Q">Q</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="pythonreference.html#Core.query_video_format">query_video_format() (Core method)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -672,6 +695,8 @@
       </ul></li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="pythonreference.html#Core.remove_log_handler">remove_log_handler() (Core method)</a>
+</li>
       <li><a href="functions/video/removeframeprops.html#std.RemoveFrameProps">RemoveFrameProps() (in module std)</a>
 </li>
       <li><a href="plugins/rgvs.html#rgvs.RemoveGrain">RemoveGrain() (in module rgvs)</a>
@@ -712,15 +737,6 @@
 </li>
       <li><a href="pythonreference.html#EnvironmentPolicyAPI.set_logger">set_logger() (EnvironmentPolicyAPI method)</a>
 </li>
-      <li>
-    set_message_handler()
-
-      <ul>
-        <li><a href="pythonreference.html#set_message_handler">built-in function</a>
-</li>
-      </ul></li>
-      <li><a href="pythonreference.html#EnvironmentPolicyAPI.set_options">set_options() (EnvironmentPolicyAPI method)</a>
-</li>
       <li><a href="pythonreference.html#AudioNode.set_output">set_output() (AudioNode method)</a>
 
       <ul>
@@ -735,12 +751,12 @@
 </li>
       <li><a href="functions/video/setframeprops.html#std.SetFrameProps">SetFrameProps() (in module std)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="functions/general/setmaxcpu.html#std.SetMaxCPU">SetMaxCPU() (in module std)</a>
 </li>
       <li><a href="functions/video/setvideocache.html#std.SetVideoCache">SetVideoCache() (in module std)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="functions/audio/shufflechannels.html#std.ShuffleChannels">ShuffleChannels() (in module std)</a>
 </li>
       <li><a href="functions/video/shuffleplanes.html#std.ShufflePlanes">ShufflePlanes() (in module std)</a>
@@ -928,9 +944,8 @@
           
           <h3>Table of Contents</h3>
           <ul>
-<li class="toctree-l1"><a class="reference internal" href="about.html">About</a></li>
-<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation Instructions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="plugins.html">Plugins and Scripts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="gettingstarted.html">Getting Started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pythonreference.html">Python Reference</a></li>
 <li class="toctree-l1"><a class="reference internal" href="functions.html">Function Reference</a></li>
@@ -969,7 +984,7 @@
           
     <div class="footer" role="contentinfo">
         &#169; Copyright 2012-2021, Fredrik Mellbin.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.2.0.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.0.
     </div>
         </div>
         <div class="clearer"></div>

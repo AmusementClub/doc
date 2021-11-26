@@ -6,14 +6,14 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Lut &#8212; VapourSynth-Classic R55 documentation</title>
+    <title>Lut &#8212; VapourSynth-Classic R57 documentation</title>
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/agogo.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css" />
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
-    <link rel="author" title="About these documents" href="../../about.html" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Lut2" href="lut2.html" />
@@ -22,7 +22,7 @@
     <div class="header-wrapper" role="banner">
       <div class="header">
         <div class="headertitle"><a
-          href="../../index.html">VapourSynth-Classic R55 documentation</a></div>
+          href="../../index.html">VapourSynth-Classic R57 documentation</a></div>
         <div class="rel" role="navigation" aria-label="related navigation">
           <a href="loop.html" title="Loop"
              accesskey="P">previous</a> |
@@ -46,7 +46,7 @@
 <h1>Lut<a class="headerlink" href="#lut" title="Permalink to this headline">¶</a></h1>
 <dl class="py function">
 <dt class="sig sig-object py" id="std.Lut">
-<span class="sig-prename descclassname"><span class="pre">std.</span></span><span class="sig-name descname"><span class="pre">Lut</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">vnode</span> <span class="pre">clip</span></em><span class="optional">[</span>, <em class="sig-param"><span class="pre">int[]</span> <span class="pre">planes</span></em>, <em class="sig-param"><span class="pre">int[]</span> <span class="pre">lut</span></em>, <em class="sig-param"><span class="pre">float[]</span> <span class="pre">lutf</span></em>, <em class="sig-param"><span class="pre">func</span> <span class="pre">function</span></em>, <em class="sig-param"><span class="pre">int</span> <span class="pre">bits</span></em>, <em class="sig-param"><span class="pre">bint</span> <span class="pre">floatout</span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#std.Lut" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">std.</span></span><span class="sig-name descname"><span class="pre">Lut</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vnode</span> <span class="pre">clip</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">int[]</span> <span class="pre">planes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int[]</span> <span class="pre">lut</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">float[]</span> <span class="pre">lutf</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">func</span> <span class="pre">function</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">bits</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bint</span> <span class="pre">floatout</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#std.Lut" title="Permalink to this definition">¶</a></dt>
 <dd><p>Applies a look-up table to the given clip. The lut can be specified as either an array
 of 2^bits_per_sample values or given as a <em>function</em> having an argument named
 <em>x</em> to be evaluated. Either <em>lut</em>, <em>lutf</em> or <em>function</em> must be used. The lut will be
@@ -89,9 +89,8 @@ values.</p>
           
           <h3>Table of Contents</h3>
           <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../../about.html">About</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../installation.html">Installation Instructions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../plugins.html">Plugins and Scripts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../gettingstarted.html">Getting Started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../pythonreference.html">Python Reference</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../../functions.html">Function Reference</a><ul class="current">
@@ -198,7 +197,7 @@ values.</p>
           
     <div class="footer" role="contentinfo">
         &#169; Copyright 2012-2021, Fredrik Mellbin.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.2.0.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.0.
     </div>
         </div>
         <div class="clearer"></div>

@@ -6,14 +6,14 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Miscellaneous Filters &#8212; VapourSynth-Classic R55 documentation</title>
+    <title>Miscellaneous Filters &#8212; VapourSynth-Classic R57 documentation</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/agogo.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/custom.css" />
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <link rel="author" title="About these documents" href="../about.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Morpho" href="morpho.html" />
@@ -22,7 +22,7 @@
     <div class="header-wrapper" role="banner">
       <div class="header">
         <div class="headertitle"><a
-          href="../index.html">VapourSynth-Classic R55 documentation</a></div>
+          href="../index.html">VapourSynth-Classic R57 documentation</a></div>
         <div class="rel" role="navigation" aria-label="related navigation">
           <a href="imwri.html" title="ImageMagick Writer-Reader"
              accesskey="P">previous</a> |
@@ -47,7 +47,7 @@
 <p>Miscellaneous Filters is a random collection of filters that mostly are useful for Avisynth compatibility.</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="misc.AverageFrames">
-<span class="sig-prename descclassname"><span class="pre">misc.</span></span><span class="sig-name descname"><span class="pre">AverageFrames</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">clip[]</span> <span class="pre">clips</span></em>, <em class="sig-param"><span class="pre">float[]</span> <span class="pre">weights</span></em><span class="optional">[</span>, <em class="sig-param"><span class="pre">float</span> <span class="pre">scale</span></em>, <em class="sig-param"><span class="pre">bint</span> <span class="pre">scenechange</span></em>, <em class="sig-param"><span class="pre">int[]</span> <span class="pre">planes</span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#misc.AverageFrames" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">misc.</span></span><span class="sig-name descname"><span class="pre">AverageFrames</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">clip[]</span> <span class="pre">clips</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">float[]</span> <span class="pre">weights</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">float</span> <span class="pre">scale</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bint</span> <span class="pre">scenechange</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int[]</span> <span class="pre">planes</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#misc.AverageFrames" title="Permalink to this definition">¶</a></dt>
 <dd><p>AverageFrames has two main modes depending on whether one or multiple <em>clips</em> are supplied.
 The filter is named AverageFrames since using ones for weights is an easy way to average
 many frames together but it can also be seen as a temporal or multiple frame convolution.</p>
@@ -64,7 +64,7 @@ right before it.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="misc.Hysteresis">
-<span class="sig-prename descclassname"><span class="pre">misc.</span></span><span class="sig-name descname"><span class="pre">Hysteresis</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">clip</span> <span class="pre">clipa</span></em>, <em class="sig-param"><span class="pre">clip</span> <span class="pre">clipb</span></em><span class="optional">[</span>, <em class="sig-param"><span class="pre">int[]</span> <span class="pre">planes</span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#misc.Hysteresis" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">misc.</span></span><span class="sig-name descname"><span class="pre">Hysteresis</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">clip</span> <span class="pre">clipa</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clip</span> <span class="pre">clipb</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">int[]</span> <span class="pre">planes</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#misc.Hysteresis" title="Permalink to this definition">¶</a></dt>
 <dd><p>Grows the mask in <em>clipa</em> into the mask in <em>clipb</em>. This is an equivalent of the Avisynth function <em>mt_hysteresis</em>.
 Note that both clips are are expected to be in the typical mask range which means that all
 planes have to be in the 0-1 range for floating point formats.</p>
@@ -80,7 +80,7 @@ planes will be copied from the corresponding plane in <em>clipa</em>.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="misc.SCDetect">
-<span class="sig-prename descclassname"><span class="pre">misc.</span></span><span class="sig-name descname"><span class="pre">SCDetect</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">clip</span> <span class="pre">clip</span></em><span class="optional">[</span>, <em class="sig-param"><span class="pre">float</span> <span class="pre">threshold=0.1</span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#misc.SCDetect" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">misc.</span></span><span class="sig-name descname"><span class="pre">SCDetect</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">clip</span> <span class="pre">clip</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">float</span> <span class="pre">threshold=0.1</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#misc.SCDetect" title="Permalink to this definition">¶</a></dt>
 <dd><p>A simple filter to mark scene changes. It works by calculating the absolute difference between the next and previous
 frames and scaling it to a 0-1 range and then comparing it to <em>threshold</em>. It’s basically just a wrapper for
 <em>PlaneStats</em>.</p>
@@ -98,9 +98,8 @@ frames and scaling it to a 0-1 range and then comparing it to <em>threshold</em>
           
           <h3>Table of Contents</h3>
           <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../about.html">About</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation Instructions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../plugins.html">Plugins and Scripts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../gettingstarted.html">Getting Started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../pythonreference.html">Python Reference</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../functions.html">Function Reference</a></li>
@@ -158,7 +157,7 @@ frames and scaling it to a 0-1 range and then comparing it to <em>threshold</em>
           
     <div class="footer" role="contentinfo">
         &#169; Copyright 2012-2021, Fredrik Mellbin.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.2.0.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.0.
     </div>
         </div>
         <div class="clearer"></div>

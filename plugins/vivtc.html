@@ -6,14 +6,14 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>VIVTC &#8212; VapourSynth-Classic R55 documentation</title>
+    <title>VIVTC &#8212; VapourSynth-Classic R57 documentation</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/agogo.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/custom.css" />
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <link rel="author" title="About these documents" href="../about.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="VapourSynth C API Reference" href="../apireference.html" />
@@ -22,7 +22,7 @@
     <div class="header-wrapper" role="banner">
       <div class="header">
         <div class="headertitle"><a
-          href="../index.html">VapourSynth-Classic R55 documentation</a></div>
+          href="../index.html">VapourSynth-Classic R57 documentation</a></div>
         <div class="rel" role="navigation" aria-label="related navigation">
           <a href="vinverse.html" title="Vinverse"
              accesskey="P">previous</a> |
@@ -48,7 +48,7 @@
 It is a rewrite of some of tritical’s TIVTC filters.</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="vivtc.VFM">
-<span class="sig-prename descclassname"><span class="pre">vivtc.</span></span><span class="sig-name descname"><span class="pre">VFM</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">clip</span> <span class="pre">clip</span></em>, <em class="sig-param"><span class="pre">int</span> <span class="pre">order</span></em><span class="optional">[</span>, <em class="sig-param"><span class="pre">int</span> <span class="pre">field=2</span></em>, <em class="sig-param"><span class="pre">int</span> <span class="pre">mode=1</span></em>, <em class="sig-param"><span class="pre">bint</span> <span class="pre">mchroma=1</span></em>, <em class="sig-param"><span class="pre">int</span> <span class="pre">cthresh=9</span></em>, <em class="sig-param"><span class="pre">int</span> <span class="pre">mi=80</span></em>, <em class="sig-param"><span class="pre">bint</span> <span class="pre">chroma=1</span></em>, <em class="sig-param"><span class="pre">int</span> <span class="pre">blockx=16</span></em>, <em class="sig-param"><span class="pre">int</span> <span class="pre">blocky=16</span></em>, <em class="sig-param"><span class="pre">int</span> <span class="pre">y0=16</span></em>, <em class="sig-param"><span class="pre">int</span> <span class="pre">y1=16</span></em>, <em class="sig-param"><span class="pre">float</span> <span class="pre">scthresh=12</span></em>, <em class="sig-param"><span class="pre">int</span> <span class="pre">micmatch=1</span></em>, <em class="sig-param"><span class="pre">bint</span> <span class="pre">micout=0</span></em>, <em class="sig-param"><span class="pre">clip</span> <span class="pre">clip2</span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#vivtc.VFM" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">vivtc.</span></span><span class="sig-name descname"><span class="pre">VFM</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">clip</span> <span class="pre">clip</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">order</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">field=2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">mode=1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bint</span> <span class="pre">mchroma=1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">cthresh=9</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">mi=80</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bint</span> <span class="pre">chroma=1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">blockx=16</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">blocky=16</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">y0=16</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">y1=16</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">float</span> <span class="pre">scthresh=12</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">micmatch=1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bint</span> <span class="pre">micout=0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clip</span> <span class="pre">clip2</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#vivtc.VFM" title="Permalink to this definition">¶</a></dt>
 <dd><p>VFM is a field matching filter that recovers the original progressive frames
 from a telecined stream. VFM’s output will contain duplicated frames, which
 is why it must be further processed by a decimation filter, like VDecimate.</p>
@@ -144,7 +144,7 @@ even when the <code class="docutils literal notranslate"><span class="pre">_Comb
 <p>3 = 2-way match + 3rd match on combed + 4th/5th matches if still combed (p/c + n + u/b)</p>
 <p>4 = 3-way match (p/c/n)</p>
 <p>5 = 3-way match + 4th/5th matches on combed (p/c/n + u/b)</p>
-<p>The parantheses at the end indicate the matches that would be used
+<p>The parentheses at the end indicate the matches that would be used
 for each mode assuming order=1 and field=1.</p>
 <p>Default: 1.</p>
 </dd>
@@ -243,7 +243,7 @@ will not accurately preserve it.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="vivtc.VDecimate">
-<span class="sig-prename descclassname"><span class="pre">vivtc.</span></span><span class="sig-name descname"><span class="pre">VDecimate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">clip</span> <span class="pre">clip</span></em><span class="optional">[</span>, <em class="sig-param"><span class="pre">int</span> <span class="pre">cycle=5</span></em>, <em class="sig-param"><span class="pre">bint</span> <span class="pre">chroma=1</span></em>, <em class="sig-param"><span class="pre">float</span> <span class="pre">dupthresh=1.1</span></em>, <em class="sig-param"><span class="pre">float</span> <span class="pre">scthresh=15</span></em>, <em class="sig-param"><span class="pre">int</span> <span class="pre">blockx=32</span></em>, <em class="sig-param"><span class="pre">int</span> <span class="pre">blocky=32</span></em>, <em class="sig-param"><span class="pre">clip</span> <span class="pre">clip2</span></em>, <em class="sig-param"><span class="pre">string</span> <span class="pre">ovr=&quot;&quot;</span></em>, <em class="sig-param"><span class="pre">bint</span> <span class="pre">dryrun=0</span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#vivtc.VDecimate" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">vivtc.</span></span><span class="sig-name descname"><span class="pre">VDecimate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">clip</span> <span class="pre">clip</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">cycle=5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bint</span> <span class="pre">chroma=1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">float</span> <span class="pre">dupthresh=1.1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">float</span> <span class="pre">scthresh=15</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">blockx=32</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">blocky=32</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clip</span> <span class="pre">clip2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">string</span> <span class="pre">ovr=&quot;&quot;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bint</span> <span class="pre">dryrun=0</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#vivtc.VDecimate" title="Permalink to this definition">¶</a></dt>
 <dd><p>VDecimate is a decimation filter. It drops one in every <em>cycle</em> frames – the
 one that is most likely to be a duplicate (mode 0 in TDecimate).</p>
 <dl>
@@ -332,9 +332,8 @@ the previous frame.</p>
           
           <h3>Table of Contents</h3>
           <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../about.html">About</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation Instructions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../plugins.html">Plugins and Scripts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../gettingstarted.html">Getting Started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../pythonreference.html">Python Reference</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../functions.html">Function Reference</a></li>
@@ -392,7 +391,7 @@ the previous frame.</p>
           
     <div class="footer" role="contentinfo">
         &#169; Copyright 2012-2021, Fredrik Mellbin.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.2.0.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.0.
     </div>
         </div>
         <div class="clearer"></div>
