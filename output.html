@@ -69,6 +69,9 @@ will not write the video frames anywhere.</p>
 </dd>
 <dt><code class="docutils literal notranslate"><span class="pre">-c,</span> <span class="pre">--container</span> <span class="pre">&lt;y4m/wav/w64&gt;</span></code></dt><dd><p>Add headers for the specified format to the output</p>
 </dd>
+<dt><code class="docutils literal notranslate"><span class="pre">-c,</span> <span class="pre">--preserve-cwd</span></code></dt><dd><p>Don’t temporarily change the working directory to the script directory (R54 compatibility)
+(The <code class="docutils literal notranslate"><span class="pre">-c</span></code> option is reused due to unfortunate reasons. If it is followed by <code class="docutils literal notranslate"><span class="pre">y4m/wav/w64</span></code>, then it’s treated as <code class="docutils literal notranslate"><span class="pre">--container</span></code>, otherwise, it’s treated as <code class="docutils literal notranslate"><span class="pre">--preserve-cwd</span></code>.)</p>
+</dd>
 <dt><code class="docutils literal notranslate"><span class="pre">-t,</span> <span class="pre">--timecodes</span> <span class="pre">FILE</span></code></dt><dd><p>Write timecodes v2 file</p>
 </dd>
 <dt><code class="docutils literal notranslate"><span class="pre">-p,</span> <span class="pre">--progress</span></code></dt><dd><p>Print progress to stderr</p>
