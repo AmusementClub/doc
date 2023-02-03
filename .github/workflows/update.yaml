@@ -1,0 +1,41 @@
+name: Update docs
+
+on:
+ - push
+ - workflow_dispatch
+
+jobs:
+  update-docs:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Setup Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: 3.11
+
+    - name: build docs
+      run: |
+        set -ex
+        pushd /tmp
+        git clone https://github.com/AmusementClub/vapoursynth-classic/ --branch doodle2 vs
+        cd vs
+        pip install -r python-requirements.txt
+        cd doc
+        echo "VS_VERSION=$(git describe  --tags --always)" >> $GITHUB_ENV
+        export SPHINXBUILD=sphinx-build
+        make html
+        popd
+        rm -rf *
+        mv -f /tmp/vs/doc/_build/html/* .
+        mv -f /tmp/vs/doc/_build/html/.[a-z]* .
+
+    - name: commit
+      run: |
+        git config --global user.name 'Github-actions'
+        git config --global user.email 'github@users.noreply.github.com'
+        git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
+        git commit -am "Automated update: ${VS_VERSION}"
+        git push
