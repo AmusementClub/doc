@@ -4,16 +4,15 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <title>Installation &#8212; VapourSynth-Classic R57 documentation</title>
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="_static/agogo.css" />
     <link rel="stylesheet" type="text/css" href="_static/css/custom.css" />
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Getting Started" href="gettingstarted.html" />
@@ -43,9 +42,9 @@
           <div class="body" role="main">
             
   <section id="installation">
-<h1>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h1>
+<h1>Installation<a class="headerlink" href="#installation" title="Permalink to this heading">¶</a></h1>
 <section id="basic-program">
-<h2>Basic Program<a class="headerlink" href="#basic-program" title="Permalink to this headline">¶</a></h2>
+<h2>Basic Program<a class="headerlink" href="#basic-program" title="Permalink to this heading">¶</a></h2>
 <p>The installation contains two main steps:</p>
 <ol class="arabic simple">
 <li><p>Install VapourSynth core library.</p></li>
@@ -61,9 +60,9 @@ and type this:</p>
 few other lines describing the options used when instantiating the Core object.
 In fact, these lines should be the same as the output result of <code class="docutils literal notranslate"><span class="pre">vspipe</span> <span class="pre">--version</span></code>.</p>
 <section id="windows-installation">
-<h3>Windows Installation<a class="headerlink" href="#windows-installation" title="Permalink to this headline">¶</a></h3>
+<h3>Windows Installation<a class="headerlink" href="#windows-installation" title="Permalink to this heading">¶</a></h3>
 <section id="prerequisites">
-<h4>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h4>
+<h4>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this heading">¶</a></h4>
 <dl class="simple">
 <dt>First download and install the prerequisites:</dt><dd><ul class="simple">
 <li><p><a class="reference external" href="http://www.python.org/">Python 3.9.x</a> or Python 3.8.x – 32 or 64 bit version depending on which version of VapourSynth you want to install</p></li>
@@ -76,7 +75,7 @@ for all users or for only for the current user.</p>
 2019 runtimes.</p>
 </section>
 <section id="id1">
-<h4>Installation<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h4>
+<h4>Installation<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h4>
 <p>Simply run the <a class="reference external" href="https://github.com/vapoursynth/vapoursynth/releases">VapourSynth installer</a>.
 It should automatically detect and install everything, including the Python wrapper.</p>
 <p>If the tests mentioned at the beginning fails, there may be a bug in the installer or there are
@@ -84,7 +83,7 @@ old copies of vapoursynth.pyd and vapoursynth.dll lying around.</p>
 </section>
 </section>
 <section id="windows-installation-portable">
-<h3>Windows Installation (Portable)<a class="headerlink" href="#windows-installation-portable" title="Permalink to this headline">¶</a></h3>
+<h3>Windows Installation (Portable)<a class="headerlink" href="#windows-installation-portable" title="Permalink to this heading">¶</a></h3>
 <dl class="simple">
 <dt>First download and decompress the prerequisites:</dt><dd><ul class="simple">
 <li><p><a class="reference external" href="http://www.python.org/">Python 3.9.x</a> or Python 3.8.x – 32 or 64 bit embeddable version</p></li>
@@ -92,12 +91,11 @@ old copies of vapoursynth.pyd and vapoursynth.dll lying around.</p>
 </dd>
 </dl>
 <p>Simply decompress the <a class="reference external" href="https://github.com/vapoursynth/vapoursynth/releases">portable VapourSynth archive</a>
-into the Python dir and overwrite all existing files.Run <code class="docutils literal notranslate"><span class="pre">vs-detect-python.bat</span></code>
-to configure it for the current Python version. Done.</p>
+into the Python dir and overwrite all existing files. Done.</p>
 <p>You can also use the VapourSynth Editor by decompressing it into the same directory.</p>
 </section>
 <section id="os-x-installation">
-<h3>OS X Installation<a class="headerlink" href="#os-x-installation" title="Permalink to this headline">¶</a></h3>
+<h3>OS X Installation<a class="headerlink" href="#os-x-installation" title="Permalink to this heading">¶</a></h3>
 <dl class="simple">
 <dt>First download and install the prerequisites:</dt><dd><ul class="simple">
 <li><p>Xcode – Available from the AppStore</p></li>
@@ -111,32 +109,32 @@ to configure it for the current Python version. Done.</p>
 </div>
 </section>
 <section id="linux-installation">
-<h3>Linux installation<a class="headerlink" href="#linux-installation" title="Permalink to this headline">¶</a></h3>
+<h3>Linux installation<a class="headerlink" href="#linux-installation" title="Permalink to this heading">¶</a></h3>
 <p>Several distributions have VapourSynth packages. Note that those packages are usually OUT OF DATE.</p>
 <section id="debian">
-<h4>Debian<a class="headerlink" href="#debian" title="Permalink to this headline">¶</a></h4>
+<h4>Debian<a class="headerlink" href="#debian" title="Permalink to this heading">¶</a></h4>
 <p>The VapourSynth packages are provided by <a class="reference external" href="https://www.deb-multimedia.org/">deb-multimedia repository</a>.
 You need to add the repository first following the guide on the official website.</p>
 </section>
 <section id="fedora-centos-and-rhel">
-<h4>Fedora, CentOS and RHEL<a class="headerlink" href="#fedora-centos-and-rhel" title="Permalink to this headline">¶</a></h4>
+<h4>Fedora, CentOS and RHEL<a class="headerlink" href="#fedora-centos-and-rhel" title="Permalink to this heading">¶</a></h4>
 <p>For Fedora, the VapourSynth packages can be downloaded from official repository directly.
 For CentOS and RHEL, you should install EPEL (Extra Packages for Enterprise Linux) repository first.</p>
 </section>
 <section id="gentoo">
-<h4>Gentoo<a class="headerlink" href="#gentoo" title="Permalink to this headline">¶</a></h4>
+<h4>Gentoo<a class="headerlink" href="#gentoo" title="Permalink to this heading">¶</a></h4>
 <p>There is an <a class="reference external" href="https://github.com/4re/vapoursynth-portage">unofficial Portage tree</a> with all VapourSynth related ebuilds.
 Check the Github link for more information and instructions.</p>
 </section>
 <section id="arch-linux">
-<h4>Arch Linux<a class="headerlink" href="#arch-linux" title="Permalink to this headline">¶</a></h4>
+<h4>Arch Linux<a class="headerlink" href="#arch-linux" title="Permalink to this heading">¶</a></h4>
 <p><a class="reference external" href="https://www.archlinux.org/packages/?q=vapoursynth">VapourSynth-related packages</a> are provided by the Community repository.</p>
 </section>
 </section>
 <section id="windows-compilation">
-<h3>Windows Compilation<a class="headerlink" href="#windows-compilation" title="Permalink to this headline">¶</a></h3>
+<h3>Windows Compilation<a class="headerlink" href="#windows-compilation" title="Permalink to this heading">¶</a></h3>
 <section id="preparing-the-build-environment-on-windows">
-<h4>Preparing the Build Environment on Windows<a class="headerlink" href="#preparing-the-build-environment-on-windows" title="Permalink to this headline">¶</a></h4>
+<h4>Preparing the Build Environment on Windows<a class="headerlink" href="#preparing-the-build-environment-on-windows" title="Permalink to this heading">¶</a></h4>
 <p>Default install paths are assumed in all projects and scripts, be prepared to adjust many things if you changed them</p>
 <p>Required languages and applications:</p>
 <ul class="simple">
@@ -147,7 +145,7 @@ Check the Github link for more information and instructions.</p>
 </ul>
 </section>
 <section id="preparing-the-c-project">
-<h4>Preparing the C++ Project<a class="headerlink" href="#preparing-the-c-project" title="Permalink to this headline">¶</a></h4>
+<h4>Preparing the C++ Project<a class="headerlink" href="#preparing-the-c-project" title="Permalink to this heading">¶</a></h4>
 <ul class="simple">
 <li><p>Clone VapourSynth</p></li>
 <li><p>Clone VSRepo into the VapourSynth dir (<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span> <span class="pre">https://github.com/vapoursynth/vsrepo</span></code>)</p></li>
@@ -158,7 +156,7 @@ Check the Github link for more information and instructions.</p>
 </ul>
 </section>
 <section id="preparing-the-python-project">
-<h4>Preparing the Python Project<a class="headerlink" href="#preparing-the-python-project" title="Permalink to this headline">¶</a></h4>
+<h4>Preparing the Python Project<a class="headerlink" href="#preparing-the-python-project" title="Permalink to this heading">¶</a></h4>
 <ul class="simple">
 <li><p>Run <code class="docutils literal notranslate"><span class="pre">py</span> <span class="pre">-3.9</span> <span class="pre">-m</span> <span class="pre">pip</span> <span class="pre">install</span> <span class="pre">-r</span> <span class="pre">python-requirements.txt</span></code> for 64bit.</p></li>
 <li><p>Run <code class="docutils literal notranslate"><span class="pre">py</span> <span class="pre">-3.9-32</span> <span class="pre">-m</span> <span class="pre">pip</span> <span class="pre">install</span> <span class="pre">-r</span> <span class="pre">python-requirements.txt</span></code> for 32bit.</p></li>
@@ -169,7 +167,7 @@ Check the Github link for more information and instructions.</p>
 </ul>
 </section>
 <section id="distribution">
-<h4>Distribution<a class="headerlink" href="#distribution" title="Permalink to this headline">¶</a></h4>
+<h4>Distribution<a class="headerlink" href="#distribution" title="Permalink to this heading">¶</a></h4>
 <p>All the above steps are necessary to create the installer</p>
 <p>You also need 7z.exe and 7z.dll from
 the 32 bit version of <a class="reference external" href="https://www.7-zip.org/">7-zip</a>
@@ -185,7 +183,7 @@ which is only available from installations/portable releases.</p>
 </section>
 </section>
 <section id="linux-and-os-x-compilation">
-<h3>Linux and OS X Compilation<a class="headerlink" href="#linux-and-os-x-compilation" title="Permalink to this headline">¶</a></h3>
+<h3>Linux and OS X Compilation<a class="headerlink" href="#linux-and-os-x-compilation" title="Permalink to this heading">¶</a></h3>
 <dl class="simple">
 <dt>These are the requirements:</dt><dd><ul class="simple">
 <li><p>Autoconf, Automake, and Libtool, probably recent versions</p></li>
@@ -204,7 +202,7 @@ which is only available from installations/portable releases.</p>
 <p>Note: <strong>any version of Python 3 will do.</strong> A specific version is only
 required when using the official Windows binaries.</p>
 <section id="required-packages-os-x">
-<h4>Required packages (OS X)<a class="headerlink" href="#required-packages-os-x" title="Permalink to this headline">¶</a></h4>
+<h4>Required packages (OS X)<a class="headerlink" href="#required-packages-os-x" title="Permalink to this heading">¶</a></h4>
 <dl class="simple">
 <dt>First download and install the prerequisites:</dt><dd><ul class="simple">
 <li><p>Xcode – Available from the AppStore</p></li>
@@ -226,7 +224,7 @@ to update them, simply run:</p>
 </div>
 </section>
 <section id="compilation">
-<h4>Compilation<a class="headerlink" href="#compilation" title="Permalink to this headline">¶</a></h4>
+<h4>Compilation<a class="headerlink" href="#compilation" title="Permalink to this heading">¶</a></h4>
 <p>If you haven’t checked out the source code before, use git to do so:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">vapoursynth</span><span class="o">/</span><span class="n">vapoursynth</span><span class="o">.</span><span class="n">git</span>
 </pre></div>
@@ -276,24 +274,24 @@ error is to use the PYTHONPATH environment variable:</p>
 </section>
 </section>
 <section id="plugins-and-scripts">
-<h2>Plugins and Scripts<a class="headerlink" href="#plugins-and-scripts" title="Permalink to this headline">¶</a></h2>
+<h2>Plugins and Scripts<a class="headerlink" href="#plugins-and-scripts" title="Permalink to this heading">¶</a></h2>
 <p>If you’re looking for plugins and scripts then one of the most complete lists
 available can be found at <a class="reference external" href="http://vsdb.top/">vsdb.top</a>.</p>
 <section id="installing-with-vsrepo">
-<h3>Installing with VSRepo<a class="headerlink" href="#installing-with-vsrepo" title="Permalink to this headline">¶</a></h3>
+<h3>Installing with VSRepo<a class="headerlink" href="#installing-with-vsrepo" title="Permalink to this heading">¶</a></h3>
 <p>On windows you can use the included vsrepo.py to install and upgrade plugins and scripts.</p>
 <p>Simply run <code class="docutils literal notranslate"><span class="pre">vsrepo.py</span> <span class="pre">install</span> <span class="pre">&lt;namespace</span> <span class="pre">or</span> <span class="pre">identifier&gt;</span></code> to install them.</p>
 <p>If you need a list of known plugins and scripts you can run <code class="docutils literal notranslate"><span class="pre">vsrepo.py</span> <span class="pre">available</span></code> or visit <a class="reference external" href="http://vsdb.top/">vsdb.top</a>.</p>
 <p>For more reference, visit <a class="reference external" href="https://github.com/vapoursynth/vsrepo">vsrepo’s repository</a></p>
 </section>
 <section id="installing-manually">
-<h3>Installing Manually<a class="headerlink" href="#installing-manually" title="Permalink to this headline">¶</a></h3>
+<h3>Installing Manually<a class="headerlink" href="#installing-manually" title="Permalink to this heading">¶</a></h3>
 <p>You can put your plugin (<code class="docutils literal notranslate"><span class="pre">.dll</span></code>) and script (<code class="docutils literal notranslate"><span class="pre">.py</span></code>) to where you think it is convenient.</p>
 <p>For plugins, you can use <code class="docutils literal notranslate"><span class="pre">std.LoadPlugin</span></code> function to load it. there is also a plugin autoloading mechanism to save your time, see blow.</p>
 <p>For scripts, you should add a relative path to <code class="docutils literal notranslate"><span class="pre">python39._pth</span></code> or <code class="docutils literal notranslate"><span class="pre">python38._pth</span></code>, then you can import it in your script.</p>
 </section>
 <section id="plugin-autoloading">
-<h3>Plugin Autoloading<a class="headerlink" href="#plugin-autoloading" title="Permalink to this headline">¶</a></h3>
+<h3>Plugin Autoloading<a class="headerlink" href="#plugin-autoloading" title="Permalink to this heading">¶</a></h3>
 <p>VapourSynth automatically loads all the native plugins located in certain
 folders. Autoloading works just like manual loading, with the exception
 that any errors encountered while loading a plugin are silently ignored.</p>
@@ -305,15 +303,15 @@ users reported crashes when VapourSynth attempted to load some
 random libraries (*cough*wxgtk*cough*).</p>
 </div>
 <section id="windows">
-<h4>Windows<a class="headerlink" href="#windows" title="Permalink to this headline">¶</a></h4>
+<h4>Windows<a class="headerlink" href="#windows" title="Permalink to this heading">¶</a></h4>
 <p>Windows has in total 3 different autoloading directories: user plugins, core plugins and global plugins. They are searched in that order.
 User plugins are always loaded first so that the current user can always decide which exact version of a plugin is used. Core plugins follow.
 Global plugins are placed last to prevent them from overriding any of the included plugins by accident.</p>
 <p>The searched paths are:</p>
 <ol class="arabic simple">
 <li><p><em>&lt;AppData&gt;</em>\VapourSynth\plugins32 or <em>&lt;AppData&gt;</em>\VapourSynth\plugins64</p></li>
-<li><p><em>&lt;VapourSynth path&gt;</em>\core32\plugins or <em>&lt;VapourSynth path&gt;</em>\core64\plugins</p></li>
-<li><p><em>&lt;VapourSynth path&gt;</em>\plugins32 or <em>&lt;VapourSynth path&gt;</em>\plugins64</p></li>
+<li><p><em>&lt;VapourSynth path&gt;</em>\core\plugins</p></li>
+<li><p><em>&lt;VapourSynth path&gt;</em>\plugins</p></li>
 </ol>
 <p>Note that the per user path is not created by default.
 On modern Windows versions the <em>AppData</em> directory is located in <em>&lt;user&gt;</em>\AppData\Roaming by default.</p>
@@ -322,7 +320,7 @@ On modern Windows versions the <em>AppData</em> directory is located in <em>&lt;
 <p>User plugins should never be put into the <em>core\plugins</em> directory.</p>
 </section>
 <section id="windows-portable">
-<h4>Windows Portable<a class="headerlink" href="#windows-portable" title="Permalink to this headline">¶</a></h4>
+<h4>Windows Portable<a class="headerlink" href="#windows-portable" title="Permalink to this heading">¶</a></h4>
 <p>The searched paths are:</p>
 <ol class="arabic simple">
 <li><p><em>&lt;VapourSynth.dll path&gt;</em>\vapoursynth32\coreplugins or <em>&lt;VapourSynth.dll path&gt;</em>\vapoursynth64\coreplugins</p></li>
@@ -331,7 +329,7 @@ On modern Windows versions the <em>AppData</em> directory is located in <em>&lt;
 <p>User plugins should never be put into the <em>coreplugins</em> directory.</p>
 </section>
 <section id="linux">
-<h4>Linux<a class="headerlink" href="#linux" title="Permalink to this headline">¶</a></h4>
+<h4>Linux<a class="headerlink" href="#linux" title="Permalink to this heading">¶</a></h4>
 <p>Autoloading can be configured using the file
 $XDG_CONFIG_HOME/vapoursynth/vapoursynth.conf,
 or $HOME/.config/vapoursynth/vapoursynth.conf if XDG_CONFIG_HOME is not
@@ -348,7 +346,7 @@ argument to <code class="docutils literal notranslate"><span class="pre">configu
 </div>
 </section>
 <section id="os-x">
-<h4>OS X<a class="headerlink" href="#os-x" title="Permalink to this headline">¶</a></h4>
+<h4>OS X<a class="headerlink" href="#os-x" title="Permalink to this heading">¶</a></h4>
 <p>Autoloading can be configured using the file
 $HOME/Library/Application Support/VapourSynth/vapoursynth.conf. Everything else is
 the same as in Linux.</p>
@@ -431,7 +429,7 @@ the same as in Linux.</p>
           
     <div class="footer" role="contentinfo">
         &#169; Copyright 2012-2021, Fredrik Mellbin.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.0.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 6.1.3.
     </div>
         </div>
         <div class="clearer"></div>

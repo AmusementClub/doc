@@ -4,16 +4,15 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <title>RGVS &#8212; VapourSynth-Classic R57 documentation</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/agogo.css" />
     <link rel="stylesheet" type="text/css" href="../_static/css/custom.css" />
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Subtext" href="subtext.html" />
@@ -43,7 +42,7 @@
           <div class="body" role="main">
             
   <section id="rgvs">
-<span id="id1"></span><h1>RGVS<a class="headerlink" href="#rgvs" title="Permalink to this headline">¶</a></h1>
+<span id="id1"></span><h1>RGVS<a class="headerlink" href="#rgvs" title="Permalink to this heading">¶</a></h1>
 <dl class="py function">
 <dt class="sig sig-object py" id="rgvs.RemoveGrain">
 <span class="sig-prename descclassname"><span class="pre">rgvs.</span></span><span class="sig-name descname"><span class="pre">RemoveGrain</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">clip</span> <span class="pre">clip</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int[]</span> <span class="pre">mode</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rgvs.RemoveGrain" title="Permalink to this definition">¶</a></dt>
@@ -239,7 +238,15 @@ the two first and the two last lines are always left unchanged.</p>
 <li class="toctree-l2"><a class="reference internal" href="misc.html">Miscellaneous Filters</a></li>
 <li class="toctree-l2"><a class="reference internal" href="morpho.html">Morpho</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ocr.html">OCR</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">RGVS</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">RGVS</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#rgvs.RemoveGrain"><code class="docutils literal notranslate"><span class="pre">RemoveGrain()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rgvs.Repair"><code class="docutils literal notranslate"><span class="pre">Repair()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rgvs.Clense"><code class="docutils literal notranslate"><span class="pre">Clense()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rgvs.ForwardClense"><code class="docutils literal notranslate"><span class="pre">ForwardClense()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rgvs.BackwardClense"><code class="docutils literal notranslate"><span class="pre">BackwardClense()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rgvs.VerticalCleaner"><code class="docutils literal notranslate"><span class="pre">VerticalCleaner()</span></code></a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="subtext.html">Subtext</a></li>
 <li class="toctree-l2"><a class="reference internal" href="vinverse.html">Vinverse</a></li>
 <li class="toctree-l2"><a class="reference internal" href="vivtc.html">VIVTC</a></li>
@@ -283,7 +290,7 @@ the two first and the two last lines are always left unchanged.</p>
           
     <div class="footer" role="contentinfo">
         &#169; Copyright 2012-2021, Fredrik Mellbin.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.0.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 6.1.3.
     </div>
         </div>
         <div class="clearer"></div>

@@ -4,16 +4,15 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <title>Included Plugins &#8212; VapourSynth-Classic R57 documentation</title>
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="_static/agogo.css" />
     <link rel="stylesheet" type="text/css" href="_static/css/custom.css" />
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="AVISource" href="plugins/avisource.html" />
@@ -43,21 +42,69 @@
           <div class="body" role="main">
             
   <section id="included-plugins">
-<h1>Included Plugins<a class="headerlink" href="#included-plugins" title="Permalink to this headline">¶</a></h1>
+<h1>Included Plugins<a class="headerlink" href="#included-plugins" title="Permalink to this heading">¶</a></h1>
 <p>The source code for these plugins can be found in the VapourSynth source
 tree. Many of them are included in the Windows installer in DLL form.</p>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="plugins/avisource.html">AVISource</a></li>
-<li class="toctree-l1"><a class="reference internal" href="plugins/eedi3.html">EEDI3</a></li>
-<li class="toctree-l1"><a class="reference internal" href="plugins/imwri.html">ImageMagick Writer-Reader</a></li>
-<li class="toctree-l1"><a class="reference internal" href="plugins/misc.html">Miscellaneous Filters</a></li>
-<li class="toctree-l1"><a class="reference internal" href="plugins/morpho.html">Morpho</a></li>
-<li class="toctree-l1"><a class="reference internal" href="plugins/ocr.html">OCR</a></li>
-<li class="toctree-l1"><a class="reference internal" href="plugins/rgvs.html">RGVS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="plugins/subtext.html">Subtext</a></li>
-<li class="toctree-l1"><a class="reference internal" href="plugins/vinverse.html">Vinverse</a></li>
-<li class="toctree-l1"><a class="reference internal" href="plugins/vivtc.html">VIVTC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plugins/avisource.html">AVISource</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="plugins/avisource.html#avisource.AVISource"><code class="docutils literal notranslate"><span class="pre">AVISource()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="plugins/avisource.html#avisource.AVIFileSource"><code class="docutils literal notranslate"><span class="pre">AVIFileSource()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="plugins/avisource.html#avisource.OpenDMLSource"><code class="docutils literal notranslate"><span class="pre">OpenDMLSource()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="plugins/eedi3.html">EEDI3</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="plugins/eedi3.html#eedi3.eedi3"><code class="docutils literal notranslate"><span class="pre">eedi3()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="plugins/imwri.html">ImageMagick Writer-Reader</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="plugins/imwri.html#imwri.Write"><code class="docutils literal notranslate"><span class="pre">Write()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="plugins/imwri.html#imwri.Read"><code class="docutils literal notranslate"><span class="pre">Read()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="plugins/misc.html">Miscellaneous Filters</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="plugins/misc.html#misc.AverageFrames"><code class="docutils literal notranslate"><span class="pre">AverageFrames()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="plugins/misc.html#misc.Hysteresis"><code class="docutils literal notranslate"><span class="pre">Hysteresis()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="plugins/misc.html#misc.SCDetect"><code class="docutils literal notranslate"><span class="pre">SCDetect()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="plugins/morpho.html">Morpho</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="plugins/morpho.html#morpho.Dilate"><code class="docutils literal notranslate"><span class="pre">Dilate()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="plugins/morpho.html#morpho.Erode"><code class="docutils literal notranslate"><span class="pre">Erode()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="plugins/morpho.html#morpho.Open"><code class="docutils literal notranslate"><span class="pre">Open()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="plugins/morpho.html#morpho.Close"><code class="docutils literal notranslate"><span class="pre">Close()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="plugins/morpho.html#morpho.TopHat"><code class="docutils literal notranslate"><span class="pre">TopHat()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="plugins/morpho.html#morpho.BottomHat"><code class="docutils literal notranslate"><span class="pre">BottomHat()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="plugins/ocr.html">OCR</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="plugins/ocr.html#ocr.Recognize"><code class="docutils literal notranslate"><span class="pre">Recognize()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="plugins/rgvs.html">RGVS</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="plugins/rgvs.html#rgvs.RemoveGrain"><code class="docutils literal notranslate"><span class="pre">RemoveGrain()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="plugins/rgvs.html#rgvs.Repair"><code class="docutils literal notranslate"><span class="pre">Repair()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="plugins/rgvs.html#rgvs.Clense"><code class="docutils literal notranslate"><span class="pre">Clense()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="plugins/rgvs.html#rgvs.ForwardClense"><code class="docutils literal notranslate"><span class="pre">ForwardClense()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="plugins/rgvs.html#rgvs.BackwardClense"><code class="docutils literal notranslate"><span class="pre">BackwardClense()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="plugins/rgvs.html#rgvs.VerticalCleaner"><code class="docutils literal notranslate"><span class="pre">VerticalCleaner()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="plugins/subtext.html">Subtext</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="plugins/subtext.html#sub.TextFile"><code class="docutils literal notranslate"><span class="pre">TextFile()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="plugins/subtext.html#sub.Subtitle"><code class="docutils literal notranslate"><span class="pre">Subtitle()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="plugins/subtext.html#sub.ImageFile"><code class="docutils literal notranslate"><span class="pre">ImageFile()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="plugins/vinverse.html">Vinverse</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="plugins/vinverse.html#vinverse.Vinverse"><code class="docutils literal notranslate"><span class="pre">Vinverse()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="plugins/vivtc.html">VIVTC</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="plugins/vivtc.html#vivtc.VFM"><code class="docutils literal notranslate"><span class="pre">VFM()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="plugins/vivtc.html#vivtc.VDecimate"><code class="docutils literal notranslate"><span class="pre">VDecimate()</span></code></a></li>
+</ul>
+</li>
 </ul>
 </div>
 </section>
@@ -131,7 +178,7 @@ tree. Many of them are included in the Windows installer in DLL form.</p>
           
     <div class="footer" role="contentinfo">
         &#169; Copyright 2012-2021, Fredrik Mellbin.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.0.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 6.1.3.
     </div>
         </div>
         <div class="clearer"></div>

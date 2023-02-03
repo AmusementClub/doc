@@ -4,16 +4,15 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <title>VapourSynth.h &#8212; VapourSynth-Classic R57 documentation</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/agogo.css" />
     <link rel="stylesheet" type="text/css" href="../_static/css/custom.css" />
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="VSHelper.h" href="vshelper.h.html" />
@@ -43,9 +42,9 @@
           <div class="body" role="main">
             
   <section id="vapoursynth-h">
-<h1>VapourSynth.h<a class="headerlink" href="#vapoursynth-h" title="Permalink to this headline">¶</a></h1>
+<h1>VapourSynth.h<a class="headerlink" href="#vapoursynth-h" title="Permalink to this heading">¶</a></h1>
 <section id="table-of-contents">
-<h2>Table of contents<a class="headerlink" href="#table-of-contents" title="Permalink to this headline">¶</a></h2>
+<h2>Table of contents<a class="headerlink" href="#table-of-contents" title="Permalink to this heading">¶</a></h2>
 <p><a class="reference internal" href="#introduction">Introduction</a></p>
 <dl>
 <dt><a class="reference internal" href="#macros">Macros</a></dt><dd><p><a class="reference internal" href="#vs-cc">VS_CC</a></p>
@@ -230,47 +229,47 @@ but otherwise still resist classification:</p>
 </dl>
 </section>
 <section id="introduction">
-<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">¶</a></h2>
 <p>This is VapourSynth’s main header file. Plugins and applications that use
 the library must include it.</p>
 <p>VapourSynth’s public API is all C.</p>
 </section>
 <section id="macros">
-<h2>Macros<a class="headerlink" href="#macros" title="Permalink to this headline">¶</a></h2>
+<h2>Macros<a class="headerlink" href="#macros" title="Permalink to this heading">¶</a></h2>
 <p>VapourSynth.h defines some preprocessor macros that make the programmer’s life
 easier. The relevant ones are described below.</p>
 <section id="vs-cc">
-<h3>VS_CC<a class="headerlink" href="#vs-cc" title="Permalink to this headline">¶</a></h3>
+<h3>VS_CC<a class="headerlink" href="#vs-cc" title="Permalink to this heading">¶</a></h3>
 <p>The <code class="docutils literal notranslate"><span class="pre">VS_CC</span></code> macro expands to the calling convention used by VapourSynth.
 All functions meant to be called by VapourSynth must use this macro (a
 filter’s “init”, “getframe”, “free” functions, etc).</p>
 <p>Example:</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="k">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">VS_CC</span><span class="w"> </span><span class="n">fooInit</span><span class="p">(...)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="k">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">VS_CC</span><span class="w"> </span><span class="nf">fooInit</span><span class="p">(...)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">}</span>
 </pre></div>
 </div>
 </section>
 <section id="vs-external-api">
-<h3>VS_EXTERNAL_API<a class="headerlink" href="#vs-external-api" title="Permalink to this headline">¶</a></h3>
+<h3>VS_EXTERNAL_API<a class="headerlink" href="#vs-external-api" title="Permalink to this heading">¶</a></h3>
 <p>The <code class="docutils literal notranslate"><span class="pre">VS_EXTERNAL_API</span></code> macro expands to the platform-specific magic required
 for functions exported by shared libraries. It also takes care of adding
 <code class="docutils literal notranslate"><span class="pre">extern</span> <span class="pre">&quot;C&quot;</span></code> when needed, and <code class="docutils literal notranslate"><span class="pre">VS_CC</span></code>.</p>
 <p>This macro must be used for a plugin’s entry point, like so:</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">VS_EXTERNAL_API</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="w"> </span><span class="n">VapourSynthPluginInit</span><span class="p">(...)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">VS_EXTERNAL_API</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="w"> </span><span class="n">VapourSynthPluginInit</span><span class="p">(...)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">}</span>
 </pre></div>
 </div>
 </section>
 <section id="vapoursynth-api-major">
-<h3>VAPOURSYNTH_API_MAJOR<a class="headerlink" href="#vapoursynth-api-major" title="Permalink to this headline">¶</a></h3>
+<h3>VAPOURSYNTH_API_MAJOR<a class="headerlink" href="#vapoursynth-api-major" title="Permalink to this heading">¶</a></h3>
 <p>Major API version.</p>
 <p>This macro was added in VapourSynth R26 (API R3).</p>
 </section>
 <section id="vapoursynth-api-minor">
-<h3>VAPOURSYNTH_API_MINOR<a class="headerlink" href="#vapoursynth-api-minor" title="Permalink to this headline">¶</a></h3>
+<h3>VAPOURSYNTH_API_MINOR<a class="headerlink" href="#vapoursynth-api-minor" title="Permalink to this heading">¶</a></h3>
 <p>Minor API version. It is bumped when new functions are added to <a class="reference internal" href="#vsapi">VSAPI</a>.</p>
 <p>This macro was added in VapourSynth R26 (API R3).</p>
 </section>
 <section id="vapoursynth-api-version">
-<h3>VAPOURSYNTH_API_VERSION<a class="headerlink" href="#vapoursynth-api-version" title="Permalink to this headline">¶</a></h3>
+<h3>VAPOURSYNTH_API_VERSION<a class="headerlink" href="#vapoursynth-api-version" title="Permalink to this heading">¶</a></h3>
 <p>API version. The high 16 bits are <a class="reference internal" href="#vapoursynth-api-major">VAPOURSYNTH_API_MAJOR</a>, the low 16
 bits are <a class="reference internal" href="#vapoursynth-api-minor">VAPOURSYNTH_API_MINOR</a>.</p>
 <p>Prior to VapourSynth R26, the API version consisted of only the major
@@ -278,9 +277,9 @@ component.</p>
 </section>
 </section>
 <section id="enums">
-<h2>Enums<a class="headerlink" href="#enums" title="Permalink to this headline">¶</a></h2>
+<h2>Enums<a class="headerlink" href="#enums" title="Permalink to this heading">¶</a></h2>
 <section id="enum-vscolorfamily">
-<span id="vscolorfamily"></span><h3>enum VSColorFamily<a class="headerlink" href="#enum-vscolorfamily" title="Permalink to this headline">¶</a></h3>
+<span id="vscolorfamily"></span><h3>enum VSColorFamily<a class="headerlink" href="#enum-vscolorfamily" title="Permalink to this heading">¶</a></h3>
 <blockquote>
 <div><ul class="simple">
 <li><p>cmGray</p></li>
@@ -292,7 +291,7 @@ component.</p>
 </div></blockquote>
 </section>
 <section id="enum-vssampletype">
-<span id="vssampletype"></span><h3>enum VSSampleType<a class="headerlink" href="#enum-vssampletype" title="Permalink to this headline">¶</a></h3>
+<span id="vssampletype"></span><h3>enum VSSampleType<a class="headerlink" href="#enum-vssampletype" title="Permalink to this heading">¶</a></h3>
 <blockquote>
 <div><ul class="simple">
 <li><p>stInteger</p></li>
@@ -301,7 +300,7 @@ component.</p>
 </div></blockquote>
 </section>
 <section id="enum-vspresetformat">
-<span id="vspresetformat"></span><h3>enum VSPresetFormat<a class="headerlink" href="#enum-vspresetformat" title="Permalink to this headline">¶</a></h3>
+<span id="vspresetformat"></span><h3>enum VSPresetFormat<a class="headerlink" href="#enum-vspresetformat" title="Permalink to this heading">¶</a></h3>
 <blockquote>
 <div><p>The presets suffixed with H and S have floating point sample type.
 The H and S suffixes stand for half precision and single precision,
@@ -350,7 +349,7 @@ They are not to be implemented in native VapourSynth plugins.</p>
 </div></blockquote>
 </section>
 <section id="enum-vsfiltermode">
-<span id="vsfiltermode"></span><h3>enum VSFilterMode<a class="headerlink" href="#enum-vsfiltermode" title="Permalink to this headline">¶</a></h3>
+<span id="vsfiltermode"></span><h3>enum VSFilterMode<a class="headerlink" href="#enum-vsfiltermode" title="Permalink to this heading">¶</a></h3>
 <blockquote>
 <div><p>Controls how a filter will be multithreaded, if at all.</p>
 <ul>
@@ -385,7 +384,7 @@ time. Unlike fmUnordered, only one frame is processed at a time.</p>
 </div></blockquote>
 </section>
 <section id="enum-vsnodeflags">
-<span id="vsnodeflags"></span><h3>enum VSNodeFlags<a class="headerlink" href="#enum-vsnodeflags" title="Permalink to this headline">¶</a></h3>
+<span id="vsnodeflags"></span><h3>enum VSNodeFlags<a class="headerlink" href="#enum-vsnodeflags" title="Permalink to this heading">¶</a></h3>
 <blockquote>
 <div><ul>
 <li><p>nfNoCache</p>
@@ -410,7 +409,7 @@ is immediately followed by an instance of the built-in Cache filter.</p>
 </div></blockquote>
 </section>
 <section id="enum-vsproptypes">
-<span id="vsproptypes"></span><h3>enum VSPropTypes<a class="headerlink" href="#enum-vsproptypes" title="Permalink to this headline">¶</a></h3>
+<span id="vsproptypes"></span><h3>enum VSPropTypes<a class="headerlink" href="#enum-vsproptypes" title="Permalink to this heading">¶</a></h3>
 <blockquote>
 <div><p>Types of properties that can be stored in a VSMap.</p>
 <ul class="simple">
@@ -425,7 +424,7 @@ is immediately followed by an instance of the built-in Cache filter.</p>
 </div></blockquote>
 </section>
 <section id="enum-vsgetproperrors">
-<span id="vsgetproperrors"></span><h3>enum VSGetPropErrors<a class="headerlink" href="#enum-vsgetproperrors" title="Permalink to this headline">¶</a></h3>
+<span id="vsgetproperrors"></span><h3>enum VSGetPropErrors<a class="headerlink" href="#enum-vsgetproperrors" title="Permalink to this heading">¶</a></h3>
 <blockquote>
 <div><p>When a propGet* function fails, it returns one of these in the <em>err</em>
 parameter.</p>
@@ -445,7 +444,7 @@ parameter.</p>
 </div></blockquote>
 </section>
 <section id="enum-vspropappendmode">
-<span id="vspropappendmode"></span><h3>enum VSPropAppendMode<a class="headerlink" href="#enum-vspropappendmode" title="Permalink to this headline">¶</a></h3>
+<span id="vspropappendmode"></span><h3>enum VSPropAppendMode<a class="headerlink" href="#enum-vspropappendmode" title="Permalink to this heading">¶</a></h3>
 <blockquote>
 <div><p>Controls the behaviour of <a class="reference internal" href="#propsetint">propSetInt</a>() and friends.</p>
 <ul>
@@ -465,7 +464,7 @@ is added to the map, with no values associated.</p>
 </div></blockquote>
 </section>
 <section id="enum-vsactivationreason">
-<span id="vsactivationreason"></span><h3>enum VSActivationReason<a class="headerlink" href="#enum-vsactivationreason" title="Permalink to this headline">¶</a></h3>
+<span id="vsactivationreason"></span><h3>enum VSActivationReason<a class="headerlink" href="#enum-vsactivationreason" title="Permalink to this heading">¶</a></h3>
 <blockquote>
 <div><p>See <a class="reference internal" href="#vsfiltergetframe">VSFilterGetFrame</a>.</p>
 <ul class="simple">
@@ -477,7 +476,7 @@ is added to the map, with no values associated.</p>
 </div></blockquote>
 </section>
 <section id="enum-vsmessagetype">
-<span id="vsmessagetype"></span><h3>enum VSMessageType<a class="headerlink" href="#enum-vsmessagetype" title="Permalink to this headline">¶</a></h3>
+<span id="vsmessagetype"></span><h3>enum VSMessageType<a class="headerlink" href="#enum-vsmessagetype" title="Permalink to this heading">¶</a></h3>
 <blockquote>
 <div><p>See <a class="reference internal" href="#setmessagehandler">setMessageHandler</a>().</p>
 <ul class="simple">
@@ -490,10 +489,10 @@ is added to the map, with no values associated.</p>
 </section>
 </section>
 <section id="structs">
-<h2>Structs<a class="headerlink" href="#structs" title="Permalink to this headline">¶</a></h2>
+<h2>Structs<a class="headerlink" href="#structs" title="Permalink to this heading">¶</a></h2>
 <p>Most structs are opaque and their contents can only be accessed using functions in the API.</p>
 <section id="struct-vsframeref">
-<span id="vsframeref"></span><h3>struct VSFrameRef<a class="headerlink" href="#struct-vsframeref" title="Permalink to this headline">¶</a></h3>
+<span id="vsframeref"></span><h3>struct VSFrameRef<a class="headerlink" href="#struct-vsframeref" title="Permalink to this heading">¶</a></h3>
 <blockquote>
 <div><p>A frame.</p>
 <p>Each row of pixels in a frame is guaranteed to have an alignment of 32
@@ -503,21 +502,21 @@ bytes.</p>
 </div></blockquote>
 </section>
 <section id="struct-vsnoderef">
-<span id="vsnoderef"></span><h3>struct VSNodeRef<a class="headerlink" href="#struct-vsnoderef" title="Permalink to this headline">¶</a></h3>
+<span id="vsnoderef"></span><h3>struct VSNodeRef<a class="headerlink" href="#struct-vsnoderef" title="Permalink to this heading">¶</a></h3>
 <blockquote>
 <div><p>A reference to a node in the constructed filter graph. Its primary use
 is as an argument to other filter or to request frames from.</p>
 </div></blockquote>
 </section>
 <section id="struct-vscore">
-<span id="vscore"></span><h3>struct VSCore<a class="headerlink" href="#struct-vscore" title="Permalink to this headline">¶</a></h3>
+<span id="vscore"></span><h3>struct VSCore<a class="headerlink" href="#struct-vscore" title="Permalink to this heading">¶</a></h3>
 <blockquote>
 <div><p>The core represents one instance of VapourSynth. Every core individually
 loads plugins and keeps track of memory.</p>
 </div></blockquote>
 </section>
 <section id="struct-vsplugin">
-<span id="vsplugin"></span><h3>struct VSPlugin<a class="headerlink" href="#struct-vsplugin" title="Permalink to this headline">¶</a></h3>
+<span id="vsplugin"></span><h3>struct VSPlugin<a class="headerlink" href="#struct-vsplugin" title="Permalink to this heading">¶</a></h3>
 <blockquote>
 <div><p>A VapourSynth plugin. There are a few of these built into the core,
 and therefore available at all times: the basic filters (identifier
@@ -558,20 +557,20 @@ the plugin’s namespace.</p></li>
 </div></blockquote>
 </section>
 <section id="struct-vsnode">
-<span id="vsnode"></span><h3>struct VSNode<a class="headerlink" href="#struct-vsnode" title="Permalink to this headline">¶</a></h3>
+<span id="vsnode"></span><h3>struct VSNode<a class="headerlink" href="#struct-vsnode" title="Permalink to this heading">¶</a></h3>
 <blockquote>
 <div><p>Not really interesting.</p>
 </div></blockquote>
 </section>
 <section id="struct-vsfuncref">
-<span id="vsfuncref"></span><h3>struct VSFuncRef<a class="headerlink" href="#struct-vsfuncref" title="Permalink to this headline">¶</a></h3>
+<span id="vsfuncref"></span><h3>struct VSFuncRef<a class="headerlink" href="#struct-vsfuncref" title="Permalink to this heading">¶</a></h3>
 <blockquote>
 <div><p>Holds a reference to a function that may be called. This type primarily exists
 so functions can be shared between the scripting layer and plugins in the core.</p>
 </div></blockquote>
 </section>
 <section id="struct-vsmap">
-<span id="vsmap"></span><h3>struct VSMap<a class="headerlink" href="#struct-vsmap" title="Permalink to this headline">¶</a></h3>
+<span id="vsmap"></span><h3>struct VSMap<a class="headerlink" href="#struct-vsmap" title="Permalink to this heading">¶</a></h3>
 <blockquote>
 <div><p>VSMap is a container that stores (key,value) pairs. The keys are strings
 and the values can be (arrays of) integers, floating point numbers,
@@ -594,13 +593,13 @@ all prefixed with “prop”.</p>
 </div></blockquote>
 </section>
 <section id="struct-vsframecontext">
-<span id="vsframecontext"></span><h3>struct VSFrameContext<a class="headerlink" href="#struct-vsframecontext" title="Permalink to this headline">¶</a></h3>
+<span id="vsframecontext"></span><h3>struct VSFrameContext<a class="headerlink" href="#struct-vsframecontext" title="Permalink to this heading">¶</a></h3>
 <blockquote>
 <div><p>Not really interesting.</p>
 </div></blockquote>
 </section>
 <section id="struct-vsformat">
-<span id="vsformat"></span><h3>struct VSFormat<a class="headerlink" href="#struct-vsformat" title="Permalink to this headline">¶</a></h3>
+<span id="vsformat"></span><h3>struct VSFormat<a class="headerlink" href="#struct-vsformat" title="Permalink to this heading">¶</a></h3>
 <blockquote>
 <div><p>Describes the format of a clip.</p>
 <p>Don’t create an instance of this struct manually (<code class="docutils literal notranslate"><span class="pre">struct</span> <span class="pre">VSFormat</span> <span class="pre">moo;</span></code>),
@@ -655,7 +654,7 @@ smallest possible that can fit the number of bits used per sample.</p>
 <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">subSamplingH</span></span></span><a class="headerlink" href="#c.subSamplingH" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>log2 subsampling factor, applied to second and third plane.
 Convenient numbers that can be used like so:</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">uv_width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">y_width</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">subSamplingW</span><span class="p">;</span><span class="w"></span>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">uv_width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">y_width</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">subSamplingW</span><span class="p">;</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -669,7 +668,7 @@ Convenient numbers that can be used like so:</p>
 </div></blockquote>
 </section>
 <section id="struct-vscoreinfo">
-<span id="vscoreinfo"></span><h3>struct VSCoreInfo<a class="headerlink" href="#struct-vscoreinfo" title="Permalink to this headline">¶</a></h3>
+<span id="vscoreinfo"></span><h3>struct VSCoreInfo<a class="headerlink" href="#struct-vscoreinfo" title="Permalink to this heading">¶</a></h3>
 <blockquote>
 <div><p>Contains information about a <a class="reference internal" href="#vscore">VSCore</a> instance.</p>
 <dl class="c member">
@@ -712,7 +711,7 @@ core and API versions.</p>
 </div></blockquote>
 </section>
 <section id="struct-vsvideoinfo">
-<span id="vsvideoinfo"></span><h3>struct VSVideoInfo<a class="headerlink" href="#struct-vsvideoinfo" title="Permalink to this headline">¶</a></h3>
+<span id="vsvideoinfo"></span><h3>struct VSVideoInfo<a class="headerlink" href="#struct-vsvideoinfo" title="Permalink to this heading">¶</a></h3>
 <blockquote>
 <div><p>Contains information about a clip.</p>
 <dl class="c member">
@@ -765,7 +764,7 @@ i.e. clips with unknown length are not supported.</p>
 </div></blockquote>
 </section>
 <section id="struct-vsapi">
-<span id="vsapi"></span><h3>struct VSAPI<a class="headerlink" href="#struct-vsapi" title="Permalink to this headline">¶</a></h3>
+<span id="vsapi"></span><h3>struct VSAPI<a class="headerlink" href="#struct-vsapi" title="Permalink to this heading">¶</a></h3>
 <blockquote>
 <div><p>This giant struct is the way to access VapourSynth’s public API.</p>
 </div></blockquote>
@@ -970,9 +969,9 @@ corresponding source frame.</p>
 <p>Returns a pointer to the created frame. Ownership of the new frame is
 transferred to the caller.</p>
 <p>Example (assume <em>frameA</em>, <em>frameB</em>, <em>frameC</em> are existing frames):</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="k">const</span><span class="w"> </span><span class="n">VSFrameRef</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">frames</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">frameA</span><span class="p">,</span><span class="w"> </span><span class="n">frameB</span><span class="p">,</span><span class="w"> </span><span class="n">frameC</span><span class="w"> </span><span class="p">};</span><span class="w"></span>
-<span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">planes</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="p">};</span><span class="w"></span>
-<span class="n">VSFrameRef</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">newFrame</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vsapi</span><span class="o">-&gt;</span><span class="n">newVideoFrame2</span><span class="p">(</span><span class="n">f</span><span class="p">,</span><span class="w"> </span><span class="n">w</span><span class="p">,</span><span class="w"> </span><span class="n">h</span><span class="p">,</span><span class="w"> </span><span class="n">frames</span><span class="p">,</span><span class="w"> </span><span class="n">planes</span><span class="p">,</span><span class="w"> </span><span class="n">frameB</span><span class="p">,</span><span class="w"> </span><span class="n">core</span><span class="p">);</span><span class="w"></span>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="k">const</span><span class="w"> </span><span class="n">VSFrameRef</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">frames</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">frameA</span><span class="p">,</span><span class="w"> </span><span class="n">frameB</span><span class="p">,</span><span class="w"> </span><span class="n">frameC</span><span class="w"> </span><span class="p">};</span>
+<span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">planes</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="p">};</span>
+<span class="n">VSFrameRef</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">newFrame</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vsapi</span><span class="o">-&gt;</span><span class="n">newVideoFrame2</span><span class="p">(</span><span class="n">f</span><span class="p">,</span><span class="w"> </span><span class="n">w</span><span class="p">,</span><span class="w"> </span><span class="n">h</span><span class="p">,</span><span class="w"> </span><span class="n">frames</span><span class="p">,</span><span class="w"> </span><span class="n">planes</span><span class="p">,</span><span class="w"> </span><span class="n">frameB</span><span class="p">,</span><span class="w"> </span><span class="n">core</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>The newFrame’s first plane is now a copy of <em>frameA</em>’s second plane,
@@ -2002,7 +2001,7 @@ should release the internal frame references as well immediately by calling this
 </section>
 </section>
 <section id="functions">
-<h2>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
+<h2>Functions<a class="headerlink" href="#functions" title="Permalink to this heading">¶</a></h2>
 <p id="getvapoursynthapi">const <a class="reference internal" href="#vsapi">VSAPI</a>* getVapourSynthAPI(int version)</p>
 <blockquote>
 <div><p>Returns a pointer to the global VSAPI instance.</p>
@@ -2011,7 +2010,7 @@ does not meet the minimum requirements to run VapourSynth.</p>
 </div></blockquote>
 </section>
 <section id="writing-plugins">
-<h2>Writing plugins<a class="headerlink" href="#writing-plugins" title="Permalink to this headline">¶</a></h2>
+<h2>Writing plugins<a class="headerlink" href="#writing-plugins" title="Permalink to this heading">¶</a></h2>
 <p>A simple VapourSynth plugin which exports one filter will contain five
 functions: an entry point (called <code class="docutils literal notranslate"><span class="pre">VapourSynthPluginInit</span></code>), a function tasked
 with creating a filter instance (often called <code class="docutils literal notranslate"><span class="pre">fooCreate</span></code>), an “init” function
@@ -2277,7 +2276,7 @@ including its instance data.</p>
           
     <div class="footer" role="contentinfo">
         &#169; Copyright 2012-2021, Fredrik Mellbin.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.0.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 6.1.3.
     </div>
         </div>
         <div class="clearer"></div>

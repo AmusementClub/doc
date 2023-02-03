@@ -4,16 +4,15 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <title>Python Reference &#8212; VapourSynth-Classic R57 documentation</title>
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="_static/agogo.css" />
     <link rel="stylesheet" type="text/css" href="_static/css/custom.css" />
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Function Reference" href="functions.html" />
@@ -43,7 +42,7 @@
           <div class="body" role="main">
             
   <section id="python-reference">
-<span id="pythonreference"></span><h1>Python Reference<a class="headerlink" href="#python-reference" title="Permalink to this headline">¶</a></h1>
+<span id="pythonreference"></span><h1>Python Reference<a class="headerlink" href="#python-reference" title="Permalink to this heading">¶</a></h1>
 <p>VapourSynth is separated into a core library and a Python module. This section
 explains how the core library is exposed through Python and some of the
 special things unique to Python scripting, such as slicing and output.</p>
@@ -54,7 +53,7 @@ other API users) will have __name__ set to “__vapoursynth__” unlike normal P
 scripts where it usually is “__main__”.</p>
 </div>
 <section id="vapoursynth-structure">
-<h2>VapourSynth Structure<a class="headerlink" href="#vapoursynth-structure" title="Permalink to this headline">¶</a></h2>
+<h2>VapourSynth Structure<a class="headerlink" href="#vapoursynth-structure" title="Permalink to this heading">¶</a></h2>
 <p>Most operations in the VapourSynth library are performed through the singleton
 core object. This core may load plugins, which all end up in their own unit,
 or namespace, so to say, to avoid naming conflicts in the contained functions.
@@ -64,19 +63,14 @@ are CamelCase. Unit names are also lowercase and usually short. This is good to
 remember as a general rule.</p>
 </section>
 <section id="grammar">
-<h2>Grammar<a class="headerlink" href="#grammar" title="Permalink to this headline">¶</a></h2>
+<h2>Grammar<a class="headerlink" href="#grammar" title="Permalink to this heading">¶</a></h2>
 <section id="slicing-and-other-syntactic-sugar">
-<h3>Slicing and Other Syntactic Sugar<a class="headerlink" href="#slicing-and-other-syntactic-sugar" title="Permalink to this headline">¶</a></h3>
+<h3>Slicing and Other Syntactic Sugar<a class="headerlink" href="#slicing-and-other-syntactic-sugar" title="Permalink to this heading">¶</a></h3>
 <p>The VideoNode and AudioNode class (always called “clip” in practice) supports the full
 range of indexing and slicing operations in Python. If you do perform a slicing
 operation on a clip, you will get a new clip back with the desired frames.
 Here are a few examples.</p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 26%" />
-<col style="width: 38%" />
-<col style="width: 35%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Operation</p></th>
 <th class="head"><p>Description</p></th>
@@ -89,7 +83,7 @@ Here are a few examples.</p>
 <td></td>
 </tr>
 <tr class="row-odd"><td><p>clip = clip[5:11]</p></td>
-<td><p>Make a clip containing frames 5 to 10 <a class="footnote-reference brackets" href="#f1" id="id1">1</a></p></td>
+<td><p>Make a clip containing frames 5 to 10 <a class="footnote-reference brackets" href="#f1" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></p></td>
 <td><div class="line-block">
 <div class="line">clip = core.std.Trim(clip, first=5, last=10)</div>
 <div class="line">clip = core.std.AudioTrim(clip, first=5, last=10)</div>
@@ -121,7 +115,7 @@ Here are a few examples.</p>
 </td>
 </tr>
 <tr class="row-even"><td><p>clip = clip * 10</p></td>
-<td><p>The multiplication operator can be used to loop a clip <a class="footnote-reference brackets" href="#f2" id="id2">2</a></p></td>
+<td><p>The multiplication operator can be used to loop a clip <a class="footnote-reference brackets" href="#f2" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a></p></td>
 <td><div class="line-block">
 <div class="line">clip = core.std.Loop(clip, times=10)</div>
 <div class="line">clip = core.std.AudioLoop(clip, times=10)</div>
@@ -130,14 +124,16 @@ Here are a few examples.</p>
 </tr>
 </tbody>
 </table>
-<dl class="footnote brackets">
-<dt class="label" id="f1"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
-<dd><p>Note that frame numbers, like python arrays, start counting at 0 and the end value of slicing is not inclusive</p>
-</dd>
-<dt class="label" id="f2"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
-<dd><p>Note that multiplication by 0 is a special case that will repeat the clip up to the maximum frame count</p>
-</dd>
-</dl>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="f1" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
+<p>Note that frame numbers, like python arrays, start counting at 0 and the end value of slicing is not inclusive</p>
+</aside>
+<aside class="footnote brackets" id="f2" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">2</a><span class="fn-bracket">]</span></span>
+<p>Note that multiplication by 0 is a special case that will repeat the clip up to the maximum frame count</p>
+</aside>
+</aside>
 <p>Filters can be chained with a dot:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">clip</span> <span class="o">=</span> <span class="n">clip</span><span class="o">.</span><span class="n">std</span><span class="o">.</span><span class="n">Trim</span><span class="p">(</span><span class="n">first</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">last</span><span class="o">=</span><span class="mi">2000</span><span class="p">)</span><span class="o">.</span><span class="n">std</span><span class="o">.</span><span class="n">FlipVertical</span><span class="p">()</span>
 </pre></div>
@@ -148,7 +144,7 @@ Here are a few examples.</p>
 </div>
 </section>
 <section id="python-keywords-as-filter-arguments">
-<h3>Python Keywords as Filter Arguments<a class="headerlink" href="#python-keywords-as-filter-arguments" title="Permalink to this headline">¶</a></h3>
+<h3>Python Keywords as Filter Arguments<a class="headerlink" href="#python-keywords-as-filter-arguments" title="Permalink to this heading">¶</a></h3>
 <p>If a filter’s argument happens to be a Python keyword, you may prepend
 an underscore to the argument’s name when invoking the filter. The Python
 module will strip one leading underscore from all filter arguments before
@@ -165,7 +161,7 @@ passing them to the filters.</p>
 underscore to prevent collisions with python keywords.</p>
 </section>
 <section id="windows-file-paths-strings-with-backslashes">
-<h3>Windows File Paths (Strings With Backslashes)<a class="headerlink" href="#windows-file-paths-strings-with-backslashes" title="Permalink to this headline">¶</a></h3>
+<h3>Windows File Paths (Strings With Backslashes)<a class="headerlink" href="#windows-file-paths-strings-with-backslashes" title="Permalink to this heading">¶</a></h3>
 <p>If you have a string containing backslashes, you must either prefix the
 string with “r”, or duplicate every single backslash. The reason is
 that the backslash is an escape character in Python.</p>
@@ -190,7 +186,7 @@ written with forward slashes instead of backslashes:</p>
 </div>
 </section>
 <section id="output">
-<h3>Output<a class="headerlink" href="#output" title="Permalink to this headline">¶</a></h3>
+<h3>Output<a class="headerlink" href="#output" title="Permalink to this heading">¶</a></h3>
 <p>The normal way of specifying the clip(s) to output is to call
 <em>clip.set_output()</em>. All standard VapourSynth components only use output
 index 0, except for vspipe where it’s configurable but defaults to 0.
@@ -211,7 +207,7 @@ YUV420P8 (I420, IYUV), YUV422P8 (YUY2, UYVY) and YUV422P10 (v210).</p>
 </div>
 </section>
 <section id="raw-access-to-frame-data">
-<h3>Raw Access to Frame Data<a class="headerlink" href="#raw-access-to-frame-data" title="Permalink to this headline">¶</a></h3>
+<h3>Raw Access to Frame Data<a class="headerlink" href="#raw-access-to-frame-data" title="Permalink to this heading">¶</a></h3>
 <p>The VideoFrame and AudioFrame classes contains one picture/audio chunk and all the metadata
 associated with it. It is possible to access the raw data using either
 <em>get_read_ptr(plane)</em> or <em>get_write_ptr(plane)</em> and <em>get_stride(plane)</em> with ctypes.</p>
@@ -230,7 +226,7 @@ all frames in a clip, use this code:</p>
 </section>
 </section>
 <section id="classes-and-functions">
-<h2>Classes and Functions<a class="headerlink" href="#classes-and-functions" title="Permalink to this headline">¶</a></h2>
+<h2>Classes and Functions<a class="headerlink" href="#classes-and-functions" title="Permalink to this heading">¶</a></h2>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="core">
 <span class="sig-name descname"><span class="pre">core</span></span><a class="headerlink" href="#core" title="Permalink to this definition">¶</a></dt>
@@ -469,7 +465,7 @@ exception thrown when rendering the frame.</p>
 on failure.</p>
 <p><em>This method is intended for glue code. For normal use, use get_frame_async instead.</em></p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>n</strong> – The frame number</p></li>
 <li><p><strong>cb</strong> – A callback in the form <cite>cb(node, n, result)</cite></p></li>
@@ -487,7 +483,7 @@ and set its result or exception according to the result of the function.</p>
 all calls to its future-object must be wrapped.</p>
 <p><em>This method is intended for glue code. For normal use, use get_frame_async instead.</em></p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>n</strong> – The frame number</p></li>
 <li><p><strong>cb</strong> – The future-object whose result will be set.</p></li>
@@ -591,7 +587,7 @@ The <em>backlog</em> argument defines how many unconsumed frames (including thos
 compatibility with older scripts. For more information, see:
 <a class="reference external" href="apireference.html#reserved-frame-properties">API Reference</a>
 Note: This includes the data for matrix, transfer and primaries. (_Matrix,
-_Transfer, _Primaries) See <a class="reference external" href="functions/resize.html">Resize</a> for more information.</p>
+_Transfer, _Primaries) See <a class="reference external" href="functions/video/resize.html">Resize</a> for more information.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -769,7 +765,7 @@ exception thrown when rendering the frame.</p>
 on failure.</p>
 <p><em>This method is intended for glue code. For normal use, use get_frame_async instead.</em></p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>n</strong> – The frame number</p></li>
 <li><p><strong>cb</strong> – A callback in the form <cite>cb(node, n, result)</cite></p></li>
@@ -787,7 +783,7 @@ and set its result or exception according to the result of the function.</p>
 all calls to its future-object must be wrapped.</p>
 <p><em>This method is intended for glue code. For normal use, use get_frame_async instead.</em></p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>n</strong> – The frame number</p></li>
 <li><p><strong>cb</strong> – The future-object whose result will be set.</p></li>
@@ -1078,7 +1074,7 @@ Once the policy is unregistered, all calls to the additional API will fail with 
 <dd><p>This method is called when the policy has successfully been registered. It proivdes additional internal methods that are hidden as they are useless and or harmful
 unless you implement your own policy.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>special_api</strong> – This is a <a class="reference internal" href="#EnvironmentPolicyAPI" title="EnvironmentPolicyAPI"><code class="xref py py-class docutils literal notranslate"><span class="pre">EnvironmentPolicyAPI</span></code></a>-object that exposes additional API</p>
 </dd>
 </dl>
@@ -1096,7 +1092,7 @@ used by the policy.</p>
 <span class="sig-name descname"><span class="pre">get_current_environment</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#EnvironmentPolicy.get_current_environment" title="Permalink to this definition">¶</a></dt>
 <dd><p>This method is called by the module to detect which environment is currently running in the current context. If None is returned, it means that no environment is currently active.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>An <a class="reference internal" href="#EnvironmentData" title="EnvironmentData"><code class="xref py py-class docutils literal notranslate"><span class="pre">EnvironmentData</span></code></a>-object representing the currently active environment in the current context.</p>
 </dd>
 </dl>
@@ -1108,10 +1104,10 @@ used by the policy.</p>
 <dd><p>This method is called by the module to change the currently active environment. If None is passed to this function the policy may switch to another environment of its choosing.</p>
 <p>Note: The function is responsible to check whether or not the environment is alive. If a dead environment is passed, it should act like None has been passed instead of the dead environment but must never error.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>environment</strong> – The <a class="reference internal" href="#EnvironmentData" title="EnvironmentData"><code class="xref py py-class docutils literal notranslate"><span class="pre">EnvironmentData</span></code></a> to enable in the current context.</p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>The environment that was enabled previously.</p>
 </dd>
 </dl>
@@ -1228,9 +1224,11 @@ encountered in VapourSynth.</p>
 
 </section>
 <section id="constants">
-<h2>Constants<a class="headerlink" href="#constants" title="Permalink to this headline">¶</a></h2>
-<section id="video-color-family-constants">
-<h3>Video Color Family Constants<a class="headerlink" href="#video-color-family-constants" title="Permalink to this headline">¶</a></h3>
+<h2>Constants<a class="headerlink" href="#constants" title="Permalink to this heading">¶</a></h2>
+<section id="video">
+<h3>Video<a class="headerlink" href="#video" title="Permalink to this heading">¶</a></h3>
+<section id="color-family">
+<h4>Color Family<a class="headerlink" href="#color-family" title="Permalink to this heading">¶</a></h4>
 <p>The color family constants describe groups of formats and the basic way their
 color information is stored. You should be familiar with all of them apart from
 maybe <em>YCOCG</em> and <em>COMPAT</em>. The latter is a special junk category for non-planar
@@ -1242,8 +1240,8 @@ formats. These are the declared constants in the module:</p>
 </pre></div>
 </div>
 </section>
-<section id="video-format-constants">
-<h3>Video Format Constants<a class="headerlink" href="#video-format-constants" title="Permalink to this headline">¶</a></h3>
+<section id="format">
+<h4>Format<a class="headerlink" href="#format" title="Permalink to this heading">¶</a></h4>
 <p>Format constants exactly describe a format. All common and even more uncommon
 formats have handy constants predefined so in practice no one should really
 need to register one of their own. These values are mostly used by the resizers
@@ -1252,7 +1250,6 @@ the color family, then the subsampling (only YUV has it) and after that how many
 bits per sample in one plane. The exception to this rule is RGB, which has the
 bits for all 3 planes added together. The long list of values:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">NONE</span>
-
 <span class="n">GRAY8</span>
 <span class="n">GRAY9</span>
 <span class="n">GRAY10</span>
@@ -1262,37 +1259,29 @@ bits for all 3 planes added together. The long list of values:</p>
 <span class="n">GRAY32</span>
 <span class="n">GRAYH</span>
 <span class="n">GRAYS</span>
-
 <span class="n">YUV420P8</span>
 <span class="n">YUV422P8</span>
 <span class="n">YUV444P8</span>
 <span class="n">YUV410P8</span>
 <span class="n">YUV411P8</span>
 <span class="n">YUV440P8</span>
-
 <span class="n">YUV420P9</span>
 <span class="n">YUV422P9</span>
 <span class="n">YUV444P9</span>
-
 <span class="n">YUV420P10</span>
 <span class="n">YUV422P10</span>
 <span class="n">YUV444P10</span>
-
 <span class="n">YUV420P12</span>
 <span class="n">YUV422P12</span>
 <span class="n">YUV444P12</span>
-
 <span class="n">YUV420P14</span>
 <span class="n">YUV422P14</span>
 <span class="n">YUV444P14</span>
-
 <span class="n">YUV420P16</span>
 <span class="n">YUV422P16</span>
 <span class="n">YUV444P16</span>
-
 <span class="n">YUV444PH</span>
 <span class="n">YUV444PS</span>
-
 <span class="n">RGB24</span>
 <span class="n">RGB27</span>
 <span class="n">RGB30</span>
@@ -1304,8 +1293,91 @@ bits for all 3 planes added together. The long list of values:</p>
 </pre></div>
 </div>
 </section>
-<section id="audio-channel-constants">
-<h3>Audio Channel Constants<a class="headerlink" href="#audio-channel-constants" title="Permalink to this headline">¶</a></h3>
+<section id="chroma-location">
+<h4>Chroma Location<a class="headerlink" href="#chroma-location" title="Permalink to this heading">¶</a></h4>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">CHROMA_LEFT</span>
+<span class="n">CHROMA_CENTER</span>
+<span class="n">CHROMA_TOP_LEFT</span>
+<span class="n">CHROMA_TOP</span>
+<span class="n">CHROMA_BOTTOM_LEFT</span>
+<span class="n">CHROMA_BOTTOM</span>
+</pre></div>
+</div>
+</section>
+<section id="field-based">
+<h4>Field Based<a class="headerlink" href="#field-based" title="Permalink to this heading">¶</a></h4>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">FIELD_PROGRESSIVE</span>
+<span class="n">FIELD_TOP</span>
+<span class="n">FIELD_BOTTOM</span>
+</pre></div>
+</div>
+</section>
+<section id="color-range">
+<h4>Color Range<a class="headerlink" href="#color-range" title="Permalink to this heading">¶</a></h4>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">RANGE_FULL</span>
+<span class="n">RANGE_LIMITED</span>
+</pre></div>
+</div>
+</section>
+<section id="matrix-coefficients">
+<h4>Matrix Coefficients<a class="headerlink" href="#matrix-coefficients" title="Permalink to this heading">¶</a></h4>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">MATRIX_RGB</span>
+<span class="n">MATRIX_BT709</span>
+<span class="n">MATRIX_UNSPECIFIED</span>
+<span class="n">MATRIX_FCC</span>
+<span class="n">MATRIX_BT470_BG</span>
+<span class="n">MATRIX_ST170_M</span>
+<span class="n">MATRIX_YCGCO</span>
+<span class="n">MATRIX_BT2020_NCL</span>
+<span class="n">MATRIX_BT2020_CL</span>
+<span class="n">MATRIX_CHROMATICITY_DERIVED_NCL</span>
+<span class="n">MATRIX_CHROMATICITY_DERIVED_CL</span>
+<span class="n">MATRIX_ICTCP</span>
+</pre></div>
+</div>
+</section>
+<section id="transfercharacteristics">
+<h4>TransferCharacteristics<a class="headerlink" href="#transfercharacteristics" title="Permalink to this heading">¶</a></h4>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">TRANSFER_BT709</span>
+<span class="n">TRANSFER_UNSPECIFIED</span>
+<span class="n">TRANSFER_BT470_M</span>
+<span class="n">TRANSFER_BT470_BG</span>
+<span class="n">TRANSFER_BT601</span>
+<span class="n">TRANSFER_ST240_M</span>
+<span class="n">TRANSFER_LINEAR</span>
+<span class="n">TRANSFER_LOG_100</span>
+<span class="n">TRANSFER_LOG_316</span>
+<span class="n">TRANSFER_IEC_61966_2_4</span>
+<span class="n">TRANSFER_IEC_61966_2_1</span>
+<span class="n">TRANSFER_BT2020_10</span>
+<span class="n">TRANSFER_BT2020_12</span>
+<span class="n">TRANSFER_ST2084</span>
+<span class="n">TRANSFER_ARIB_B67</span>
+</pre></div>
+</div>
+</section>
+<section id="color-primaries">
+<h4>Color Primaries<a class="headerlink" href="#color-primaries" title="Permalink to this heading">¶</a></h4>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PRIMARIES_BT709</span>
+<span class="n">PRIMARIES_UNSPECIFIED</span>
+<span class="n">PRIMARIES_BT470_M</span>
+<span class="n">PRIMARIES_BT470_BG</span>
+<span class="n">PRIMARIES_ST170_M</span>
+<span class="n">PRIMARIES_ST240_M</span>
+<span class="n">PRIMARIES_FILM</span>
+<span class="n">PRIMARIES_BT2020</span>
+<span class="n">PRIMARIES_ST428</span>
+<span class="n">PRIMARIES_ST431_2</span>
+<span class="n">PRIMARIES_ST432_1</span>
+<span class="n">PRIMARIES_EBU3213_E</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="audio">
+<h3>Audio<a class="headerlink" href="#audio" title="Permalink to this heading">¶</a></h3>
+<section id="channels">
+<h4>Channels<a class="headerlink" href="#channels" title="Permalink to this heading">¶</a></h4>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">FRONT_LEFT</span>
 <span class="n">FRONT_RIGHT</span>
 <span class="n">FRONT_CENTER</span>
@@ -1334,8 +1406,9 @@ bits for all 3 planes added together. The long list of values:</p>
 </pre></div>
 </div>
 </section>
-<section id="sample-type-constants">
-<h3>Sample Type Constants<a class="headerlink" href="#sample-type-constants" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="sample-type">
+<h3>Sample Type<a class="headerlink" href="#sample-type" title="Permalink to this heading">¶</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">INTEGER</span>
 <span class="n">FLOAT</span>
 </pre></div>
@@ -1367,12 +1440,38 @@ bits for all 3 planes added together. The long list of values:</p>
 <li class="toctree-l3"><a class="reference internal" href="#raw-access-to-frame-data">Raw Access to Frame Data</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#classes-and-functions">Classes and Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#classes-and-functions">Classes and Functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#core"><code class="docutils literal notranslate"><span class="pre">core</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#get_outputs"><code class="docutils literal notranslate"><span class="pre">get_outputs()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#get_output"><code class="docutils literal notranslate"><span class="pre">get_output()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#clear_output"><code class="docutils literal notranslate"><span class="pre">clear_output()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#clear_outputs"><code class="docutils literal notranslate"><span class="pre">clear_outputs()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#construct_signature"><code class="docutils literal notranslate"><span class="pre">construct_signature()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Core"><code class="docutils literal notranslate"><span class="pre">Core</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#VideoNode"><code class="docutils literal notranslate"><span class="pre">VideoNode</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#VideoOutputTuple"><code class="docutils literal notranslate"><span class="pre">VideoOutputTuple</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#VideoFrame"><code class="docutils literal notranslate"><span class="pre">VideoFrame</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#VideoFormat"><code class="docutils literal notranslate"><span class="pre">VideoFormat</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#AudioNode"><code class="docutils literal notranslate"><span class="pre">AudioNode</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#AudioFrame"><code class="docutils literal notranslate"><span class="pre">AudioFrame</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Plugin"><code class="docutils literal notranslate"><span class="pre">Plugin</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Function"><code class="docutils literal notranslate"><span class="pre">Function</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Environment"><code class="docutils literal notranslate"><span class="pre">Environment</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#vpy_current_environment"><code class="docutils literal notranslate"><span class="pre">vpy_current_environment()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#get_current_environment"><code class="docutils literal notranslate"><span class="pre">get_current_environment()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#EnvironmentPolicy"><code class="docutils literal notranslate"><span class="pre">EnvironmentPolicy</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#EnvironmentPolicyAPI"><code class="docutils literal notranslate"><span class="pre">EnvironmentPolicyAPI</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#register_policy"><code class="docutils literal notranslate"><span class="pre">register_policy()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#has_policy"><code class="docutils literal notranslate"><span class="pre">has_policy()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#EnvironmentData"><code class="docutils literal notranslate"><span class="pre">EnvironmentData</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Func"><code class="docutils literal notranslate"><span class="pre">Func</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Error"><code class="docutils literal notranslate"><span class="pre">Error</span></code></a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="#constants">Constants</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#video-color-family-constants">Video Color Family Constants</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#video-format-constants">Video Format Constants</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#audio-channel-constants">Audio Channel Constants</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#sample-type-constants">Sample Type Constants</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#video">Video</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#audio">Audio</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sample-type">Sample Type</a></li>
 </ul>
 </li>
 </ul>
@@ -1420,7 +1519,7 @@ bits for all 3 planes added together. The long list of values:</p>
           
     <div class="footer" role="contentinfo">
         &#169; Copyright 2012-2021, Fredrik Mellbin.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.0.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 6.1.3.
     </div>
         </div>
         <div class="clearer"></div>

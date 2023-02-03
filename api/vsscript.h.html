@@ -4,16 +4,15 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <title>VSScript.h &#8212; VapourSynth-Classic R57 documentation</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/agogo.css" />
     <link rel="stylesheet" type="text/css" href="../_static/css/custom.css" />
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="prev" title="VSHelper.h" href="vshelper.h.html" /> 
@@ -40,9 +39,9 @@
           <div class="body" role="main">
             
   <section id="vsscript-h">
-<h1>VSScript.h<a class="headerlink" href="#vsscript-h" title="Permalink to this headline">¶</a></h1>
+<h1>VSScript.h<a class="headerlink" href="#vsscript-h" title="Permalink to this heading">¶</a></h1>
 <section id="table-of-contents">
-<h2>Table of contents<a class="headerlink" href="#table-of-contents" title="Permalink to this headline">¶</a></h2>
+<h2>Table of contents<a class="headerlink" href="#table-of-contents" title="Permalink to this heading">¶</a></h2>
 <p><a class="reference internal" href="#introduction">Introduction</a></p>
 <dl>
 <dt><a class="reference internal" href="#structs">Structs</a></dt><dd><p><a class="reference internal" href="#vsscript">VSScript</a></p>
@@ -71,7 +70,7 @@
 </dl>
 </section>
 <section id="introduction">
-<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">¶</a></h2>
 <p>VSScript provides a convenient wrapper for VapourSynth’s scripting interface(s), allowing the evaluation of VapourSynth scripts and retrieval of output clips.</p>
 <p>For reasons unknown, the VSScript library is called <code class="docutils literal notranslate"><span class="pre">VSScript</span></code> in Windows and <code class="docutils literal notranslate"><span class="pre">vapoursynth-script</span></code> everywhere else.</p>
 <p>At this time, VapourSynth scripts can be written only in Python (version 3).</p>
@@ -90,16 +89,16 @@
 </div>
 </section>
 <section id="structs">
-<h2>Structs<a class="headerlink" href="#structs" title="Permalink to this headline">¶</a></h2>
+<h2>Structs<a class="headerlink" href="#structs" title="Permalink to this heading">¶</a></h2>
 <section id="vsscript">
-<h3>VSScript<a class="headerlink" href="#vsscript" title="Permalink to this headline">¶</a></h3>
+<h3>VSScript<a class="headerlink" href="#vsscript" title="Permalink to this heading">¶</a></h3>
 <p>A script environment. All communication with an evaluated script happens through a VSScript object.</p>
 </section>
 </section>
 <section id="enums">
-<h2>Enums<a class="headerlink" href="#enums" title="Permalink to this headline">¶</a></h2>
+<h2>Enums<a class="headerlink" href="#enums" title="Permalink to this heading">¶</a></h2>
 <section id="vsevalflags">
-<h3>VSEvalFlags<a class="headerlink" href="#vsevalflags" title="Permalink to this headline">¶</a></h3>
+<h3>VSEvalFlags<a class="headerlink" href="#vsevalflags" title="Permalink to this heading">¶</a></h3>
 <blockquote>
 <div><ul class="simple">
 <li><p>efSetWorkingDir</p></li>
@@ -108,9 +107,9 @@
 </section>
 </section>
 <section id="functions">
-<h2>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
+<h2>Functions<a class="headerlink" href="#functions" title="Permalink to this heading">¶</a></h2>
 <section id="vsscript-getapiversion">
-<h3>vsscript_getApiVersion<a class="headerlink" href="#vsscript-getapiversion" title="Permalink to this headline">¶</a></h3>
+<h3>vsscript_getApiVersion<a class="headerlink" href="#vsscript-getapiversion" title="Permalink to this heading">¶</a></h3>
 <dl class="c function">
 <dt class="sig sig-object c" id="c.vsscript_getApiVersion">
 <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">vsscript_getApiVersion</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#c.vsscript_getApiVersion" title="Permalink to this definition">¶</a><br /></dt>
@@ -119,7 +118,7 @@
 
 </section>
 <section id="vsscript-init">
-<h3>vsscript_init<a class="headerlink" href="#vsscript-init" title="Permalink to this headline">¶</a></h3>
+<h3>vsscript_init<a class="headerlink" href="#vsscript-init" title="Permalink to this heading">¶</a></h3>
 <dl class="c function">
 <dt class="sig sig-object c" id="c.vsscript_init">
 <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">vsscript_init</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#c.vsscript_init" title="Permalink to this definition">¶</a><br /></dt>
@@ -129,7 +128,7 @@
 
 </section>
 <section id="vsscript-finalize">
-<h3>vsscript_finalize<a class="headerlink" href="#vsscript-finalize" title="Permalink to this headline">¶</a></h3>
+<h3>vsscript_finalize<a class="headerlink" href="#vsscript-finalize" title="Permalink to this heading">¶</a></h3>
 <dl class="c function">
 <dt class="sig sig-object c" id="c.vsscript_finalize">
 <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">vsscript_finalize</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#c.vsscript_finalize" title="Permalink to this definition">¶</a><br /></dt>
@@ -139,7 +138,7 @@
 
 </section>
 <section id="vsscript-evaluatescript">
-<h3>vsscript_evaluateScript<a class="headerlink" href="#vsscript-evaluatescript" title="Permalink to this headline">¶</a></h3>
+<h3>vsscript_evaluateScript<a class="headerlink" href="#vsscript-evaluatescript" title="Permalink to this heading">¶</a></h3>
 <dl class="c function">
 <dt class="sig sig-object c" id="c.vsscript_evaluateScript">
 <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">vsscript_evaluateScript</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">VSScript</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">handle</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">script</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">scriptFilename</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n"><span class="pre">flags</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.vsscript_evaluateScript" title="Permalink to this definition">¶</a><br /></dt>
@@ -163,7 +162,7 @@
 
 </section>
 <section id="vsscript-evaluatefile">
-<h3>vsscript_evaluateFile<a class="headerlink" href="#vsscript-evaluatefile" title="Permalink to this headline">¶</a></h3>
+<h3>vsscript_evaluateFile<a class="headerlink" href="#vsscript-evaluatefile" title="Permalink to this heading">¶</a></h3>
 <dl class="c function">
 <dt class="sig sig-object c" id="c.vsscript_evaluateFile">
 <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">vsscript_evaluateFile</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">VSScript</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">handle</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">scriptFilename</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n"><span class="pre">flags</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.vsscript_evaluateFile" title="Permalink to this definition">¶</a><br /></dt>
@@ -173,7 +172,7 @@
 
 </section>
 <section id="vsscript-createscript">
-<h3>vsscript_createScript<a class="headerlink" href="#vsscript-createscript" title="Permalink to this headline">¶</a></h3>
+<h3>vsscript_createScript<a class="headerlink" href="#vsscript-createscript" title="Permalink to this heading">¶</a></h3>
 <dl class="c function">
 <dt class="sig sig-object c" id="c.vsscript_createScript">
 <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">vsscript_createScript</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">VSScript</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">handle</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.vsscript_createScript" title="Permalink to this definition">¶</a><br /></dt>
@@ -184,7 +183,7 @@
 
 </section>
 <section id="vsscript-freescript">
-<h3>vsscript_freeScript<a class="headerlink" href="#vsscript-freescript" title="Permalink to this headline">¶</a></h3>
+<h3>vsscript_freeScript<a class="headerlink" href="#vsscript-freescript" title="Permalink to this heading">¶</a></h3>
 <dl class="c function">
 <dt class="sig sig-object c" id="c.vsscript_freeScript">
 <span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">vsscript_freeScript</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">VSScript</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">handle</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.vsscript_freeScript" title="Permalink to this definition">¶</a><br /></dt>
@@ -201,7 +200,7 @@
 
 </section>
 <section id="vsscript-geterror">
-<h3>vsscript_getError<a class="headerlink" href="#vsscript-geterror" title="Permalink to this headline">¶</a></h3>
+<h3>vsscript_getError<a class="headerlink" href="#vsscript-geterror" title="Permalink to this heading">¶</a></h3>
 <dl class="c function">
 <dt class="sig sig-object c" id="c.vsscript_getError">
 <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">vsscript_getError</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">VSScript</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">handle</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.vsscript_getError" title="Permalink to this definition">¶</a><br /></dt>
@@ -212,7 +211,7 @@
 
 </section>
 <section id="vsscript-getexitcode">
-<h3>vsscript_getExitCode<a class="headerlink" href="#vsscript-getexitcode" title="Permalink to this headline">¶</a></h3>
+<h3>vsscript_getExitCode<a class="headerlink" href="#vsscript-getexitcode" title="Permalink to this heading">¶</a></h3>
 <dl class="c function">
 <dt class="sig sig-object c" id="c.vsscript_getExitCode">
 <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">vsscript_getExitCode</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">VSScript</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">handle</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.vsscript_getExitCode" title="Permalink to this definition">¶</a><br /></dt>
@@ -222,7 +221,7 @@
 
 </section>
 <section id="vsscript-getoutput">
-<h3>vsscript_getOutput<a class="headerlink" href="#vsscript-getoutput" title="Permalink to this headline">¶</a></h3>
+<h3>vsscript_getOutput<a class="headerlink" href="#vsscript-getoutput" title="Permalink to this heading">¶</a></h3>
 <dl class="c function">
 <dt class="sig sig-object c" id="c.vsscript_getOutput">
 <span class="n"><span class="pre">VSNodeRef</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">vsscript_getOutput</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">VSScript</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">handle</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n"><span class="pre">index</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.vsscript_getOutput" title="Permalink to this definition">¶</a><br /></dt>
@@ -233,7 +232,7 @@
 
 </section>
 <section id="vsscript-clearoutput">
-<h3>vsscript_clearOutput<a class="headerlink" href="#vsscript-clearoutput" title="Permalink to this headline">¶</a></h3>
+<h3>vsscript_clearOutput<a class="headerlink" href="#vsscript-clearoutput" title="Permalink to this heading">¶</a></h3>
 <dl class="c function">
 <dt class="sig sig-object c" id="c.vsscript_clearOutput">
 <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">vsscript_clearOutput</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">VSScript</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">handle</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n"><span class="pre">index</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.vsscript_clearOutput" title="Permalink to this definition">¶</a><br /></dt>
@@ -243,7 +242,7 @@
 
 </section>
 <section id="vsscript-getcore">
-<h3>vsscript_getCore<a class="headerlink" href="#vsscript-getcore" title="Permalink to this headline">¶</a></h3>
+<h3>vsscript_getCore<a class="headerlink" href="#vsscript-getcore" title="Permalink to this heading">¶</a></h3>
 <dl class="c function">
 <dt class="sig sig-object c" id="c.vsscript_getCore">
 <span class="n"><span class="pre">VSCore</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">vsscript_getCore</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">VSScript</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">handle</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.vsscript_getCore" title="Permalink to this definition">¶</a><br /></dt>
@@ -254,7 +253,7 @@
 
 </section>
 <section id="vsscript-getvsapi">
-<h3>vsscript_getVSApi<a class="headerlink" href="#vsscript-getvsapi" title="Permalink to this headline">¶</a></h3>
+<h3>vsscript_getVSApi<a class="headerlink" href="#vsscript-getvsapi" title="Permalink to this heading">¶</a></h3>
 <dl class="c function">
 <dt class="sig sig-object c" id="c.vsscript_getVSApi">
 <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">VSAPI</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">vsscript_getVSApi</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#c.vsscript_getVSApi" title="Permalink to this definition">¶</a><br /></dt>
@@ -264,7 +263,7 @@
 
 </section>
 <section id="vsscript-getvsapi2">
-<h3>vsscript_getVSApi2<a class="headerlink" href="#vsscript-getvsapi2" title="Permalink to this headline">¶</a></h3>
+<h3>vsscript_getVSApi2<a class="headerlink" href="#vsscript-getvsapi2" title="Permalink to this heading">¶</a></h3>
 <dl class="c function">
 <dt class="sig sig-object c" id="c.vsscript_getVSApi2">
 <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">VSAPI</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">vsscript_getVSApi2</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n"><span class="pre">version</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.vsscript_getVSApi2" title="Permalink to this definition">¶</a><br /></dt>
@@ -274,7 +273,7 @@
 
 </section>
 <section id="vsscript-getvariable">
-<h3>vsscript_getVariable<a class="headerlink" href="#vsscript-getvariable" title="Permalink to this headline">¶</a></h3>
+<h3>vsscript_getVariable<a class="headerlink" href="#vsscript-getvariable" title="Permalink to this heading">¶</a></h3>
 <dl class="c function">
 <dt class="sig sig-object c" id="c.vsscript_getVariable">
 <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">vsscript_getVariable</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">VSScript</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">handle</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">name</span></span>, <span class="n"><span class="pre">VSMap</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">dst</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.vsscript_getVariable" title="Permalink to this definition">¶</a><br /></dt>
@@ -291,7 +290,7 @@
 
 </section>
 <section id="vsscript-setvariable">
-<h3>vsscript_setVariable<a class="headerlink" href="#vsscript-setvariable" title="Permalink to this headline">¶</a></h3>
+<h3>vsscript_setVariable<a class="headerlink" href="#vsscript-setvariable" title="Permalink to this heading">¶</a></h3>
 <dl class="c function">
 <dt class="sig sig-object c" id="c.vsscript_setVariable">
 <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">vsscript_setVariable</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">VSScript</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">handle</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">VSMap</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">vars</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.vsscript_setVariable" title="Permalink to this definition">¶</a><br /></dt>
@@ -307,7 +306,7 @@
 
 </section>
 <section id="vsscript-clearvariable">
-<h3>vsscript_clearVariable<a class="headerlink" href="#vsscript-clearvariable" title="Permalink to this headline">¶</a></h3>
+<h3>vsscript_clearVariable<a class="headerlink" href="#vsscript-clearvariable" title="Permalink to this heading">¶</a></h3>
 <dl class="c function">
 <dt class="sig sig-object c" id="c.vsscript_clearVariable">
 <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">vsscript_clearVariable</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">VSScript</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">handle</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">name</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.vsscript_clearVariable" title="Permalink to this definition">¶</a><br /></dt>
@@ -317,7 +316,7 @@
 
 </section>
 <section id="vsscript-clearenvironment">
-<h3>vsscript_clearEnvironment<a class="headerlink" href="#vsscript-clearenvironment" title="Permalink to this headline">¶</a></h3>
+<h3>vsscript_clearEnvironment<a class="headerlink" href="#vsscript-clearenvironment" title="Permalink to this heading">¶</a></h3>
 <dl class="c function">
 <dt class="sig sig-object c" id="c.vsscript_clearEnvironment">
 <span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">vsscript_clearEnvironment</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">VSScript</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">handle</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.vsscript_clearEnvironment" title="Permalink to this definition">¶</a><br /></dt>
@@ -397,7 +396,7 @@
           
     <div class="footer" role="contentinfo">
         &#169; Copyright 2012-2021, Fredrik Mellbin.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.0.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 6.1.3.
     </div>
         </div>
         <div class="clearer"></div>

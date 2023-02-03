@@ -4,16 +4,15 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <title>FrameEval &#8212; VapourSynth-Classic R57 documentation</title>
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/agogo.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css" />
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-    <script src="../../_static/jquery.js"></script>
-    <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx_highlight.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="FreezeFrames" href="freezeframes.html" />
@@ -43,7 +42,7 @@
           <div class="body" role="main">
             
   <section id="frameeval">
-<h1>FrameEval<a class="headerlink" href="#frameeval" title="Permalink to this headline">¶</a></h1>
+<h1>FrameEval<a class="headerlink" href="#frameeval" title="Permalink to this heading">¶</a></h1>
 <dl class="py function">
 <dt class="sig sig-object py" id="std.FrameEval">
 <span class="sig-prename descclassname"><span class="pre">std.</span></span><span class="sig-name descname"><span class="pre">FrameEval</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vnode</span> <span class="pre">clip</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">func</span> <span class="pre">eval</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">vnode[]</span> <span class="pre">prop_src</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vnode[]</span> <span class="pre">clip_src</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#std.FrameEval" title="Permalink to this definition">¶</a></dt>
@@ -108,8 +107,8 @@ calculated frame properties and use them for conditional filtering:</p>
    <span class="n">adjusted_clip</span> <span class="o">=</span> <span class="n">vs</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">std</span><span class="o">.</span><span class="n">FrameEval</span><span class="p">(</span><span class="n">rgb_clip</span><span class="p">,</span> <span class="n">functools</span><span class="o">.</span><span class="n">partial</span><span class="p">(</span><span class="n">GrayWorld1Adjust</span><span class="p">,</span> <span class="n">clip</span><span class="o">=</span><span class="n">rgb_clip</span><span class="p">,</span> <span class="n">core</span><span class="o">=</span><span class="n">vs</span><span class="o">.</span><span class="n">core</span><span class="p">),</span> <span class="n">prop_src</span><span class="o">=</span><span class="p">[</span><span class="n">r_avg</span><span class="p">,</span> <span class="n">g_avg</span><span class="p">,</span> <span class="n">b_avg</span><span class="p">])</span>
    <span class="k">return</span> <span class="n">vs</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">resize</span><span class="o">.</span><span class="n">Bilinear</span><span class="p">(</span><span class="n">adjusted_clip</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="n">clip</span><span class="o">.</span><span class="n">format</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="n">matrix_s</span><span class="o">=</span><span class="n">matrix_s</span><span class="p">)</span>
 
-<span class="n">vs</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">std</span><span class="o">.</span><span class="n">LoadPlugin</span><span class="p">(</span><span class="n">path</span><span class="o">=</span><span class="s1">&#39;ffms2.dll&#39;</span><span class="p">)</span>
-<span class="n">main</span> <span class="o">=</span> <span class="n">vs</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ffms2</span><span class="o">.</span><span class="n">Source</span><span class="p">(</span><span class="n">source</span><span class="o">=</span><span class="s1">&#39;...&#39;</span><span class="p">)</span>
+<span class="n">vs</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">std</span><span class="o">.</span><span class="n">LoadPlugin</span><span class="p">(</span><span class="n">path</span><span class="o">=</span><span class="s1">&#39;libvslsmashsource.dll&#39;</span><span class="p">)</span>
+<span class="n">main</span> <span class="o">=</span> <span class="n">vs</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">lsmas</span><span class="o">.</span><span class="n">LWLibavSource</span><span class="p">(</span><span class="n">source</span><span class="o">=</span><span class="s1">&#39;...&#39;</span><span class="p">)</span>
 <span class="n">main</span> <span class="o">=</span> <span class="n">GrayWorld1</span><span class="p">(</span><span class="n">main</span><span class="p">)</span>
 <span class="n">main</span><span class="o">.</span><span class="n">set_output</span><span class="p">()</span>
 </pre></div>
@@ -236,7 +235,7 @@ calculated frame properties and use them for conditional filtering:</p>
           
     <div class="footer" role="contentinfo">
         &#169; Copyright 2012-2021, Fredrik Mellbin.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.0.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 6.1.3.
     </div>
         </div>
         <div class="clearer"></div>

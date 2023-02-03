@@ -4,16 +4,15 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <title>Welcome to VapourSynth-Classic’s documentation! &#8212; VapourSynth-Classic R57 documentation</title>
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="_static/agogo.css" />
     <link rel="stylesheet" type="text/css" href="_static/css/custom.css" />
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Introduction" href="introduction.html" /> 
@@ -40,7 +39,7 @@
           <div class="body" role="main">
             
   <section id="welcome-to-vapoursynth-classics-documentation">
-<h1>Welcome to <a class="reference external" href="https://amusementclub.github.io/doc/">VapourSynth-Classic</a>’s documentation!<a class="headerlink" href="#welcome-to-vapoursynth-classics-documentation" title="Permalink to this headline">¶</a></h1>
+<h1>Welcome to <a class="reference external" href="https://amusementclub.github.io/doc/">VapourSynth-Classic</a>’s documentation!<a class="headerlink" href="#welcome-to-vapoursynth-classics-documentation" title="Permalink to this heading">¶</a></h1>
 <p>Contents:</p>
 <div class="toctree-wrapper compound">
 <ul>
@@ -81,12 +80,38 @@
 <li class="toctree-l3"><a class="reference internal" href="pythonreference.html#raw-access-to-frame-data">Raw Access to Frame Data</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="pythonreference.html#classes-and-functions">Classes and Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pythonreference.html#classes-and-functions">Classes and Functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pythonreference.html#core"><code class="docutils literal notranslate"><span class="pre">core</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pythonreference.html#get_outputs"><code class="docutils literal notranslate"><span class="pre">get_outputs()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pythonreference.html#get_output"><code class="docutils literal notranslate"><span class="pre">get_output()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pythonreference.html#clear_output"><code class="docutils literal notranslate"><span class="pre">clear_output()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pythonreference.html#clear_outputs"><code class="docutils literal notranslate"><span class="pre">clear_outputs()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pythonreference.html#construct_signature"><code class="docutils literal notranslate"><span class="pre">construct_signature()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pythonreference.html#Core"><code class="docutils literal notranslate"><span class="pre">Core</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pythonreference.html#VideoNode"><code class="docutils literal notranslate"><span class="pre">VideoNode</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pythonreference.html#VideoOutputTuple"><code class="docutils literal notranslate"><span class="pre">VideoOutputTuple</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pythonreference.html#VideoFrame"><code class="docutils literal notranslate"><span class="pre">VideoFrame</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pythonreference.html#VideoFormat"><code class="docutils literal notranslate"><span class="pre">VideoFormat</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pythonreference.html#AudioNode"><code class="docutils literal notranslate"><span class="pre">AudioNode</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pythonreference.html#AudioFrame"><code class="docutils literal notranslate"><span class="pre">AudioFrame</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pythonreference.html#Plugin"><code class="docutils literal notranslate"><span class="pre">Plugin</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pythonreference.html#Function"><code class="docutils literal notranslate"><span class="pre">Function</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pythonreference.html#Environment"><code class="docutils literal notranslate"><span class="pre">Environment</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pythonreference.html#vpy_current_environment"><code class="docutils literal notranslate"><span class="pre">vpy_current_environment()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pythonreference.html#get_current_environment"><code class="docutils literal notranslate"><span class="pre">get_current_environment()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pythonreference.html#EnvironmentPolicy"><code class="docutils literal notranslate"><span class="pre">EnvironmentPolicy</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pythonreference.html#EnvironmentPolicyAPI"><code class="docutils literal notranslate"><span class="pre">EnvironmentPolicyAPI</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pythonreference.html#register_policy"><code class="docutils literal notranslate"><span class="pre">register_policy()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pythonreference.html#has_policy"><code class="docutils literal notranslate"><span class="pre">has_policy()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pythonreference.html#EnvironmentData"><code class="docutils literal notranslate"><span class="pre">EnvironmentData</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pythonreference.html#Func"><code class="docutils literal notranslate"><span class="pre">Func</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pythonreference.html#Error"><code class="docutils literal notranslate"><span class="pre">Error</span></code></a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="pythonreference.html#constants">Constants</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="pythonreference.html#video-color-family-constants">Video Color Family Constants</a></li>
-<li class="toctree-l3"><a class="reference internal" href="pythonreference.html#video-format-constants">Video Format Constants</a></li>
-<li class="toctree-l3"><a class="reference internal" href="pythonreference.html#audio-channel-constants">Audio Channel Constants</a></li>
-<li class="toctree-l3"><a class="reference internal" href="pythonreference.html#sample-type-constants">Sample Type Constants</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pythonreference.html#video">Video</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pythonreference.html#audio">Audio</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pythonreference.html#sample-type">Sample Type</a></li>
 </ul>
 </li>
 </ul>
@@ -194,16 +219,64 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="avisynthcomp.html">Avisynth functions and their VapourSynth equivalents</a></li>
 <li class="toctree-l1"><a class="reference internal" href="includedplugins.html">Included Plugins</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="plugins/avisource.html">AVISource</a></li>
-<li class="toctree-l2"><a class="reference internal" href="plugins/eedi3.html">EEDI3</a></li>
-<li class="toctree-l2"><a class="reference internal" href="plugins/imwri.html">ImageMagick Writer-Reader</a></li>
-<li class="toctree-l2"><a class="reference internal" href="plugins/misc.html">Miscellaneous Filters</a></li>
-<li class="toctree-l2"><a class="reference internal" href="plugins/morpho.html">Morpho</a></li>
-<li class="toctree-l2"><a class="reference internal" href="plugins/ocr.html">OCR</a></li>
-<li class="toctree-l2"><a class="reference internal" href="plugins/rgvs.html">RGVS</a></li>
-<li class="toctree-l2"><a class="reference internal" href="plugins/subtext.html">Subtext</a></li>
-<li class="toctree-l2"><a class="reference internal" href="plugins/vinverse.html">Vinverse</a></li>
-<li class="toctree-l2"><a class="reference internal" href="plugins/vivtc.html">VIVTC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plugins/avisource.html">AVISource</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="plugins/avisource.html#avisource.AVISource"><code class="docutils literal notranslate"><span class="pre">AVISource()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="plugins/avisource.html#avisource.AVIFileSource"><code class="docutils literal notranslate"><span class="pre">AVIFileSource()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="plugins/avisource.html#avisource.OpenDMLSource"><code class="docutils literal notranslate"><span class="pre">OpenDMLSource()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="plugins/eedi3.html">EEDI3</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="plugins/eedi3.html#eedi3.eedi3"><code class="docutils literal notranslate"><span class="pre">eedi3()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="plugins/imwri.html">ImageMagick Writer-Reader</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="plugins/imwri.html#imwri.Write"><code class="docutils literal notranslate"><span class="pre">Write()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="plugins/imwri.html#imwri.Read"><code class="docutils literal notranslate"><span class="pre">Read()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="plugins/misc.html">Miscellaneous Filters</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="plugins/misc.html#misc.AverageFrames"><code class="docutils literal notranslate"><span class="pre">AverageFrames()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="plugins/misc.html#misc.Hysteresis"><code class="docutils literal notranslate"><span class="pre">Hysteresis()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="plugins/misc.html#misc.SCDetect"><code class="docutils literal notranslate"><span class="pre">SCDetect()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="plugins/morpho.html">Morpho</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="plugins/morpho.html#morpho.Dilate"><code class="docutils literal notranslate"><span class="pre">Dilate()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="plugins/morpho.html#morpho.Erode"><code class="docutils literal notranslate"><span class="pre">Erode()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="plugins/morpho.html#morpho.Open"><code class="docutils literal notranslate"><span class="pre">Open()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="plugins/morpho.html#morpho.Close"><code class="docutils literal notranslate"><span class="pre">Close()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="plugins/morpho.html#morpho.TopHat"><code class="docutils literal notranslate"><span class="pre">TopHat()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="plugins/morpho.html#morpho.BottomHat"><code class="docutils literal notranslate"><span class="pre">BottomHat()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="plugins/ocr.html">OCR</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="plugins/ocr.html#ocr.Recognize"><code class="docutils literal notranslate"><span class="pre">Recognize()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="plugins/rgvs.html">RGVS</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="plugins/rgvs.html#rgvs.RemoveGrain"><code class="docutils literal notranslate"><span class="pre">RemoveGrain()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="plugins/rgvs.html#rgvs.Repair"><code class="docutils literal notranslate"><span class="pre">Repair()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="plugins/rgvs.html#rgvs.Clense"><code class="docutils literal notranslate"><span class="pre">Clense()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="plugins/rgvs.html#rgvs.ForwardClense"><code class="docutils literal notranslate"><span class="pre">ForwardClense()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="plugins/rgvs.html#rgvs.BackwardClense"><code class="docutils literal notranslate"><span class="pre">BackwardClense()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="plugins/rgvs.html#rgvs.VerticalCleaner"><code class="docutils literal notranslate"><span class="pre">VerticalCleaner()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="plugins/subtext.html">Subtext</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="plugins/subtext.html#sub.TextFile"><code class="docutils literal notranslate"><span class="pre">TextFile()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="plugins/subtext.html#sub.Subtitle"><code class="docutils literal notranslate"><span class="pre">Subtitle()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="plugins/subtext.html#sub.ImageFile"><code class="docutils literal notranslate"><span class="pre">ImageFile()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="plugins/vinverse.html">Vinverse</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="plugins/vinverse.html#vinverse.Vinverse"><code class="docutils literal notranslate"><span class="pre">Vinverse()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="plugins/vivtc.html">VIVTC</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="plugins/vivtc.html#vivtc.VFM"><code class="docutils literal notranslate"><span class="pre">VFM()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="plugins/vivtc.html#vivtc.VDecimate"><code class="docutils literal notranslate"><span class="pre">VDecimate()</span></code></a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="apireference.html">VapourSynth C API Reference</a><ul>
@@ -225,7 +298,7 @@
 </div>
 </section>
 <section id="indices-and-tables">
-<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
+<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this heading">¶</a></h1>
 <ul class="simple">
 <li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
 <li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
@@ -287,7 +360,7 @@
           
     <div class="footer" role="contentinfo">
         &#169; Copyright 2012-2021, Fredrik Mellbin.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.0.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 6.1.3.
     </div>
         </div>
         <div class="clearer"></div>
